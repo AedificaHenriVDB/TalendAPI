@@ -10,8 +10,9 @@
     "children" : [ {
       "entity" : {
         "type" : "Request",
-        "id" : "7a49026f-0b2a-4d0e-ba42-ea41d3578781",
-        "name" : "List of customer",
+        "id" : "57bbc097-942c-4dbb-8b35-607f10493b89",
+        "name" : "List Customers",
+        "description" : "List All customers",
         "uri" : {
           "host" : "${\"BaseUrl\"}",
           "path" : "/Customers"
@@ -30,11 +31,36 @@
     }, {
       "entity" : {
         "type" : "Request",
-        "id" : "a33cbd28-b630-4155-ba74-1c47648eb8c9",
-        "name" : "Get one customer",
+        "id" : "24a7a629-f739-41f7-9102-2468daf7cdb5",
+        "name" : "Add Customer",
         "uri" : {
           "host" : "${\"BaseUrl\"}",
-          "path" : "/Customers/{ID}"
+          "path" : "/Customer"
+        },
+        "method" : {
+          "link" : "",
+          "name" : "POST",
+          "requestBody" : true
+        },
+        "headers" : [ {
+          "enabled" : true,
+          "name" : "Content-Type",
+          "value" : "application/json"
+        } ],
+        "headersType" : "Form",
+        "body" : {
+          "bodyType" : "Text",
+          "textBody" : "{\"ID\": \"1920\",\n\"NAME\": \"Sofiene\",\n\"LAST NAME\": \"Khayati\",\n\"MAIL\": \"Sofiene.Khayati@agilos.com\",\n\"PHONE\": \"0465784646\",\n\"STREET_NUMBER\": \"12\",\n\"CITY\": \"Ixelles\",\n\"DEPARTMENT\": \"Brussels\",\n\"REGION\": \"Brussels\",\n\"COUNTRY\": \"Belgium\",\n\"POSTAL_CODE\": \"1050\"}"
+        }
+      }
+    }, {
+      "entity" : {
+        "type" : "Request",
+        "id" : "fec49c85-fa60-4e26-bb40-9d53490ef491",
+        "name" : "Get One Custome",
+        "uri" : {
+          "host" : "${\"BaseUrl\"}",
+          "path" : "/Customer/{ID}"
         },
         "method" : {
           "link" : "",
@@ -55,9 +81,22 @@
       "projectId" : "734b112a-2a3a-46fc-89ba-8020878eed42"
     },
     "variables" : {
-      "07138071-0083-4856-8c16-8a164ae95c1f" : {
+      "23079b7a-429d-40f9-a3d0-a6fe055b1379" : {
         "name" : "BaseUrl",
-        "value" : "https://example.com",
+        "value" : "https://2ig912ru1eka29u.eu.api-mocks.com",
+        "enabled" : true,
+        "private" : false
+      }
+    }
+  }, {
+    "name" : "API_DEMO 1.0.0",
+    "importedFrom" : {
+      "projectId" : "734b112a-2a3a-46fc-89ba-8020878eed42"
+    },
+    "variables" : {
+      "116face0-db8f-4061-92d5-fb5dd06ef018" : {
+        "name" : "BaseUrl",
+        "value" : "http://www.agilos.com",
         "enabled" : true,
         "private" : false
       }

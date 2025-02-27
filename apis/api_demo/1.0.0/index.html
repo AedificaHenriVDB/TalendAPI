@@ -59,10 +59,39 @@
   <div class="api__action">
     
 <div class="try-in-tester js-try-in-tester">
-  <button class="try-in-tester__action js-try-in-tester--action btn btn--primary js-api-try-in-tester "
+  <button class="try-in-tester__action js-try-in-tester--action btn btn--primary js-api-try-in-tester try-in-tester__action--with-dropdown "
           type="button">
     Try in API Tester
+    (2)</button>
+  <button title="Select your endpoint" class="try-in-tester__dropdown js-dropdown btn btn--primary"
+    aria-controls="endpoints-list"
+    aria-label="Select your endpoint"
+    aria-haspopup="true"
+    aria-expanded="false"
+    type="button">
+      <svg viewBox="0 0 16 16" aria-hidden="true" class="dropdown__icon"><path d="M8 13.6l-8-8L2.6 3 8 8.4 13.4 3 16 5.6z"></path></svg>
     </button>
+    <div id="endpoints-list"
+         role="menu"
+         class="dropdown__content dropdown__content--endpoints "
+         hidden>
+      <button title="https://2ig912ru1eka29u.eu.api-mocks.com"
+                data-endpoint-url="https://2ig912ru1eka29u.eu.api-mocks.com"
+                role="menuitem"
+                class="js-try-in-tester-endpoint dropdown__item dropdown__item--endpoints btn--naked"
+                type="button">
+          <span class="text--ellipsis dropdown__item--endpoints-url">https://2ig912ru1eka29u.eu.api-mocks.com</span></button>
+      <button title="http://www.agilos.com"
+                data-endpoint-url="http://www.agilos.com"
+                role="menuitem"
+                class="js-try-in-tester-endpoint dropdown__item dropdown__item--endpoints btn--naked"
+                type="button">
+          <span class="text--ellipsis dropdown__item--endpoints-url">http://www.agilos.com</span></button>
+      <a role="menuitem"
+         class="dropdown__item dropdown__item--endpoints-link-description"
+         href="#endpoints">
+        Go to endpoint descriptions</a>
+    </div>
   </div>
 
 
@@ -90,13 +119,15 @@
   <nav class="api__nav" aria-label="API content">
     <ul class="api-toc js-api-toc">
 <li><ul class="api-toc__content">
-    <li class="api-toc__item api-toc__item--datatype"><a href="#type_customer">Customer</a></li>
-    <li class="api-toc__item api-toc__item--datatype"><a href="#type_customers">Customers</a></li>
     
-  <li class="api-toc__item api-toc__item--request-get"><a href="#operation_list-of-customer">List of customer</a></li>
+  <li class="api-toc__item api-toc__item--request-get"><a href="#operation_list-customers">List Customers</a></li>
         
-  <li class="api-toc__item api-toc__item--request-get"><a href="#operation_get-one-customer">Get one customer</a></li>
-        </ul>
+  <li class="api-toc__item api-toc__item--request-post"><a href="#operation_add-customer">Add Customer</a></li>
+        
+  <li class="api-toc__item api-toc__item--request-get"><a href="#operation_get-one-custome">Get One Custome</a></li>
+        <li class="api-toc__item api-toc__item--datatype"><a href="#type_customer">Customer</a></li>
+    <li class="api-toc__item api-toc__item--datatype"><a href="#type_customers">Customers</a></li>
+    </ul>
 </li>
 </ul>
   </nav>
@@ -123,12 +154,14 @@
 <dl class="definition contact">
   </dl>
 <div class="definition">
-      <h3 id="mediatypes">Media type</h3>
-      <div>application/json</div>
-    </div>
-<div class="definition">
       <h3 id="endpoints">Endpoints</h3>
       <ul class="endpoints">
+        <li class="endpoint__value">
+          <span class="endpoint__url">https://2ig912ru1eka29u.eu.api-mocks.com</span>
+          <div class="endpoint__description wysiwyg">This is your API mock endpoint. When called, it will simulate the behavior of your API.</div></li>
+        <li class="endpoint__value">
+          <span class="endpoint__url">http://www.agilos.com</span>
+          <div class="endpoint__description wysiwyg">Agilos</div></li>
         </ul>
     </div>
 <div class="definition">
@@ -146,6 +179,420 @@
 
 
 
+<section id="operation_list-customers_anchor" class="operation" aria-labelledby="operation_list-customers">
+	<div class="operation__content">
+        <h3 id="operation_list-customers">List Customers</h3>
+        <span class="operation--get operation--default">GET</span> <span class="operation__url">/Customers</span>
+	<div class="operation__description wysiwyg">List All customers</div><div class="definition__content definition">
+			<h4>Response</h4>
+		
+		
+				
+					
+
+<div class="response">
+	<details class="response__detail" open="">
+		<summary class="response__type"><span><span class="badge badge--2xx">200</span>Status 200</span><svg viewBox="0 0 16 16" aria-hidden="true" class="response__type--icon"><path d="M8 13.6l-8-8L2.6 3 8 8.4 13.4 3 16 5.6z"></path></svg></summary>
+		<div class="response-description wysiwyg">Result OK</div>
+
+
+
+<div class="response__content">
+    <span class="response__body">Body</span>
+    <div class="dropdown">
+    <span class="response__mimetype">application/json</span></div>
+</div>
+
+    <div id="body_c6c4781b43b7fe9880b4c5b982305eb5applicationjson" class="body__content" >
+    <div class="body__content">
+
+
+
+
+<a href="#type_customers">Customers</a>
+<button type="button" class="btn--naked tooltip js-tooltip-trigger" aria-expanded="false" aria-haspopup="true" aria-controls="tooltip_type_customers">
+	<span class="sr-only">Customers details</span>
+	<svg class="tooltip__icon" viewBox="0 0 16 16" aria-hidden="true"><g><path d="M8,0 C12.418278,0 16,3.581722 16,8 C16,12.418278 12.418278,16 8,16 C3.581722,16 0,12.418278 0,8 C0,3.581722 3.581722,0 8,0 Z M7.88888889,6.11262338 C7.39796911,6.11262338 7,6.51059249 7,7.00151227 L7,11.4459567 C7,11.9368765 7.39796911,12.3348456 7.88888889,12.3348456 C8.37980867,12.3348456 8.77777778,11.9368765 8.77777778,11.4459567 L8.77777778,7.00151227 C8.77777778,6.51059249 8.37980867,6.11262338 7.88888889,6.11262338 Z M7.88888889,3.44293218 C7.39796911,3.44293218 7,3.84090129 7,4.33182107 C7,4.82274084 7.39796911,5.22070996 7.88888889,5.22070996 C8.37980867,5.22070996 8.77777778,4.82274084 8.77777778,4.33182107 C8.77777778,3.84090129 8.37980867,3.44293218 7.88888889,3.44293218 Z"></path></g></svg>
+</button>
+</div>
+        <div class="definition-example">
+        <div id="bodySample_c6c4781b43b7fe9880b4c5b982305eb5applicationjson" class="definition-example__title">
+            <span>Status 200</span><span class="definition-example__mimetype">
+                    application/json</span>
+            </div>
+        <div role="region" tabindex="0" class="code-container" aria-labelledby="bodySample_c6c4781b43b7fe9880b4c5b982305eb5applicationjson">
+
+
+	
+		<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl"><span class="nt">&#34;Customers&#34;</span><span class="p">:[</span>
+</span></span><span class="line"><span class="cl">    <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;ID&#34;</span><span class="p">:</span> <span class="s2">&#34;1234&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;NAME&#34;</span><span class="p">:</span> <span class="s2">&#34;Alice&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;LAST_NAME&#34;</span><span class="p">:</span> <span class="s2">&#34;Khayati&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;MAIL&#34;</span><span class="p">:</span> <span class="s2">&#34;Sofiene.Khayati@agilos.com&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;PHONE&#34;</span><span class="p">:</span> <span class="s2">&#34;0465784646&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;STREET_NUMBER&#34;</span><span class="p">:</span> <span class="s2">&#34;11&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;CITY&#34;</span><span class="p">:</span> <span class="s2">&#34;Brussels&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;DEPARTMENT&#34;</span><span class="p">:</span> <span class="s2">&#34;Brussels&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;REGION&#34;</span><span class="p">:</span> <span class="s2">&#34;Brussels&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;COUNTRY&#34;</span><span class="p">:</span> <span class="s2">&#34;Belgium&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;POSTAL_CODE&#34;</span><span class="p">:</span> <span class="s2">&#34;1000&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">},</span>
+</span></span><span class="line"><span class="cl">    <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;ID&#34;</span><span class="p">:</span> <span class="s2">&#34;1920&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;NAME&#34;</span><span class="p">:</span> <span class="s2">&#34;Sofiene&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;LAST_NAME&#34;</span><span class="p">:</span> <span class="s2">&#34;Khayati&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;MAIL&#34;</span><span class="p">:</span> <span class="s2">&#34;Sofiene.Khayati@agilos.com&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;PHONE&#34;</span><span class="p">:</span> <span class="s2">&#34;0465784646&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;STREET_NUMBER&#34;</span><span class="p">:</span> <span class="s2">&#34;12&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;CITY&#34;</span><span class="p">:</span> <span class="s2">&#34;Ixelles&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;DEPARTMENT&#34;</span><span class="p">:</span> <span class="s2">&#34;Brussels&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;REGION&#34;</span><span class="p">:</span> <span class="s2">&#34;Brussels&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;COUNTRY&#34;</span><span class="p">:</span> <span class="s2">&#34;Belgium&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;POSTAL_CODE&#34;</span><span class="p">:</span> <span class="s2">&#34;1050&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">},</span>
+</span></span><span class="line"><span class="cl">    <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;ID&#34;</span><span class="p">:</span> <span class="s2">&#34;1920&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;NAME&#34;</span><span class="p">:</span> <span class="s2">&#34;Lina&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;LAST_NAME&#34;</span><span class="p">:</span> <span class="s2">&#34;Khayati&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;MAIL&#34;</span><span class="p">:</span> <span class="s2">&#34;Sofiene.Khayati@agilos.com&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;PHONE&#34;</span><span class="p">:</span> <span class="s2">&#34;0465784646&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;STREET_NUMBER&#34;</span><span class="p">:</span> <span class="s2">&#34;12&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;CITY&#34;</span><span class="p">:</span> <span class="s2">&#34;Ixelles&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;DEPARTMENT&#34;</span><span class="p">:</span> <span class="s2">&#34;Brussels&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;REGION&#34;</span><span class="p">:</span> <span class="s2">&#34;Brussels&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;COUNTRY&#34;</span><span class="p">:</span> <span class="s2">&#34;Belgium&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;POSTAL_CODE&#34;</span><span class="p">:</span> <span class="s2">&#34;1050&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">},</span>
+</span></span><span class="line"><span class="cl">    <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;ID&#34;</span><span class="p">:</span> <span class="s2">&#34;1920&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;NAME&#34;</span><span class="p">:</span> <span class="s2">&#34;Henri&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;LAST_NAME&#34;</span><span class="p">:</span> <span class="s2">&#34;Van Den Berghe&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;MAIL&#34;</span><span class="p">:</span> <span class="s2">&#34;Sofiene.Khayati@agilos.com&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;PHONE&#34;</span><span class="p">:</span> <span class="s2">&#34;0465784646&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;STREET_NUMBER&#34;</span><span class="p">:</span> <span class="s2">&#34;1&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;CITY&#34;</span><span class="p">:</span> <span class="s2">&#34;Saint Gilles&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;DEPARTMENT&#34;</span><span class="p">:</span> <span class="s2">&#34;Brussels&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;REGION&#34;</span><span class="p">:</span> <span class="s2">&#34;Brussels&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;COUNTRY&#34;</span><span class="p">:</span> <span class="s2">&#34;Belgium&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;POSTAL_CODE&#34;</span><span class="p">:</span> <span class="s2">&#34;1060&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">]</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span></span></span></code></pre></div></div>
+    </div>
+        </div>
+    </details>
+</div>
+</div>
+	</div>
+	<div class="operation__content-info operation__content-info--odd">
+		
+<div class="try-in-tester js-try-in-tester">
+  <button class="try-in-tester__action js-try-in-tester--action btn btn--primary js-operation-try-in-tester try-in-tester__action--with-dropdown "
+          data-operation-id="57bbc097-942c-4dbb-8b35-607f10493b89" type="button">
+    Try in API Tester
+    (2)</button>
+  <button title="Select your endpoint" class="try-in-tester__dropdown js-dropdown btn btn--primary"
+    aria-controls="endpoints-list"
+    aria-label="Select your endpoint"
+    aria-haspopup="true"
+    aria-expanded="false"
+    type="button">
+      <svg viewBox="0 0 16 16" aria-hidden="true" class="dropdown__icon"><path d="M8 13.6l-8-8L2.6 3 8 8.4 13.4 3 16 5.6z"></path></svg>
+    </button>
+    <div id="endpoints-list"
+         role="menu"
+         class="dropdown__content dropdown__content--endpoints dropdown__content--endpoints-operation "
+         hidden>
+      <button title="https://2ig912ru1eka29u.eu.api-mocks.com"
+                data-endpoint-url="https://2ig912ru1eka29u.eu.api-mocks.com"
+                role="menuitem"
+                class="js-try-in-tester-endpoint dropdown__item dropdown__item--endpoints btn--naked"
+                type="button">
+          <span class="text--ellipsis dropdown__item--endpoints-url">https://2ig912ru1eka29u.eu.api-mocks.com</span></button>
+      <button title="http://www.agilos.com"
+                data-endpoint-url="http://www.agilos.com"
+                role="menuitem"
+                class="js-try-in-tester-endpoint dropdown__item dropdown__item--endpoints btn--naked"
+                type="button">
+          <span class="text--ellipsis dropdown__item--endpoints-url">http://www.agilos.com</span></button>
+      <a role="menuitem"
+         class="dropdown__item dropdown__item--endpoints-link-description"
+         href="#endpoints">
+        Go to endpoint descriptions</a>
+    </div>
+  </div>
+
+</div>
+</section>
+
+
+<section id="operation_add-customer_anchor" class="operation" aria-labelledby="operation_add-customer">
+	<div class="operation__content">
+        <h3 id="operation_add-customer">Add Customer</h3>
+        <span class="operation--post operation--default">POST</span> <span class="operation__url">/Customer</span>
+	<div class="definition__content definition">
+			<div>
+				<h4>Request</h4>
+		
+
+
+
+
+
+</div>
+		
+
+<div class="request__content">
+    <span class="request__body">Body</span>
+    <div class="dropdown">
+    <span class="request__mimetype">application/json</span></div>
+</div>
+
+    <div id="body_b447bcbc4ec88572e30b858f96b31059applicationjson" class="body__content" >
+    <div class="body__content">
+
+
+
+
+<a href="#type_customer">Customer</a>
+<button type="button" class="btn--naked tooltip js-tooltip-trigger" aria-expanded="false" aria-haspopup="true" aria-controls="tooltip_type_customer">
+	<span class="sr-only">Customer details</span>
+	<svg class="tooltip__icon" viewBox="0 0 16 16" aria-hidden="true"><g><path d="M8,0 C12.418278,0 16,3.581722 16,8 C16,12.418278 12.418278,16 8,16 C3.581722,16 0,12.418278 0,8 C0,3.581722 3.581722,0 8,0 Z M7.88888889,6.11262338 C7.39796911,6.11262338 7,6.51059249 7,7.00151227 L7,11.4459567 C7,11.9368765 7.39796911,12.3348456 7.88888889,12.3348456 C8.37980867,12.3348456 8.77777778,11.9368765 8.77777778,11.4459567 L8.77777778,7.00151227 C8.77777778,6.51059249 8.37980867,6.11262338 7.88888889,6.11262338 Z M7.88888889,3.44293218 C7.39796911,3.44293218 7,3.84090129 7,4.33182107 C7,4.82274084 7.39796911,5.22070996 7.88888889,5.22070996 C8.37980867,5.22070996 8.77777778,4.82274084 8.77777778,4.33182107 C8.77777778,3.84090129 8.37980867,3.44293218 7.88888889,3.44293218 Z"></path></g></svg>
+</button>
+</div>
+        <div class="definition-example">
+        <div id="bodySample_b447bcbc4ec88572e30b858f96b31059applicationjson" class="definition-example__title">
+            <span class="definition-example__mimetype">
+                    application/json</span>
+            </div>
+        <div role="region" tabindex="0" class="code-container" aria-labelledby="bodySample_b447bcbc4ec88572e30b858f96b31059applicationjson">
+
+
+	
+		<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl"><span class="p">{</span><span class="nt">&#34;ID&#34;</span><span class="p">:</span> <span class="s2">&#34;1920&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl"><span class="nt">&#34;NAME&#34;</span><span class="p">:</span> <span class="s2">&#34;Sofiene&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl"><span class="nt">&#34;LAST NAME&#34;</span><span class="p">:</span> <span class="s2">&#34;Khayati&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl"><span class="nt">&#34;MAIL&#34;</span><span class="p">:</span> <span class="s2">&#34;Sofiene.Khayati@agilos.com&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl"><span class="nt">&#34;PHONE&#34;</span><span class="p">:</span> <span class="s2">&#34;0465784646&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl"><span class="nt">&#34;STREET_NUMBER&#34;</span><span class="p">:</span> <span class="s2">&#34;12&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl"><span class="nt">&#34;CITY&#34;</span><span class="p">:</span> <span class="s2">&#34;Ixelles&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl"><span class="nt">&#34;DEPARTMENT&#34;</span><span class="p">:</span> <span class="s2">&#34;Brussels&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl"><span class="nt">&#34;REGION&#34;</span><span class="p">:</span> <span class="s2">&#34;Brussels&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl"><span class="nt">&#34;COUNTRY&#34;</span><span class="p">:</span> <span class="s2">&#34;Belgium&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl"><span class="nt">&#34;POSTAL_CODE&#34;</span><span class="p">:</span> <span class="s2">&#34;1050&#34;</span><span class="p">}</span></span></span></code></pre></div></div>
+    </div>
+        </div>
+    </div>
+	<div class="definition__content definition">
+			<h4>Response</h4>
+		
+		
+				
+					
+
+<div class="response">
+	<details class="response__detail" open="">
+		<summary class="response__type"><span><span class="badge badge--2xx">200</span>Status 200</span><svg viewBox="0 0 16 16" aria-hidden="true" class="response__type--icon"><path d="M8 13.6l-8-8L2.6 3 8 8.4 13.4 3 16 5.6z"></path></svg></summary>
+		<div class="response-description wysiwyg">Customer Added</div>
+
+
+
+</details>
+</div>
+</div>
+	</div>
+	<div class="operation__content-info operation__content-info--odd">
+		
+<div class="try-in-tester js-try-in-tester">
+  <button class="try-in-tester__action js-try-in-tester--action btn btn--primary js-operation-try-in-tester try-in-tester__action--with-dropdown "
+          data-operation-id="24a7a629-f739-41f7-9102-2468daf7cdb5" type="button">
+    Try in API Tester
+    (2)</button>
+  <button title="Select your endpoint" class="try-in-tester__dropdown js-dropdown btn btn--primary"
+    aria-controls="endpoints-list"
+    aria-label="Select your endpoint"
+    aria-haspopup="true"
+    aria-expanded="false"
+    type="button">
+      <svg viewBox="0 0 16 16" aria-hidden="true" class="dropdown__icon"><path d="M8 13.6l-8-8L2.6 3 8 8.4 13.4 3 16 5.6z"></path></svg>
+    </button>
+    <div id="endpoints-list"
+         role="menu"
+         class="dropdown__content dropdown__content--endpoints dropdown__content--endpoints-operation "
+         hidden>
+      <button title="https://2ig912ru1eka29u.eu.api-mocks.com"
+                data-endpoint-url="https://2ig912ru1eka29u.eu.api-mocks.com"
+                role="menuitem"
+                class="js-try-in-tester-endpoint dropdown__item dropdown__item--endpoints btn--naked"
+                type="button">
+          <span class="text--ellipsis dropdown__item--endpoints-url">https://2ig912ru1eka29u.eu.api-mocks.com</span></button>
+      <button title="http://www.agilos.com"
+                data-endpoint-url="http://www.agilos.com"
+                role="menuitem"
+                class="js-try-in-tester-endpoint dropdown__item dropdown__item--endpoints btn--naked"
+                type="button">
+          <span class="text--ellipsis dropdown__item--endpoints-url">http://www.agilos.com</span></button>
+      <a role="menuitem"
+         class="dropdown__item dropdown__item--endpoints-link-description"
+         href="#endpoints">
+        Go to endpoint descriptions</a>
+    </div>
+  </div>
+
+</div>
+</section>
+
+
+<section id="operation_get-one-custome_anchor" class="operation" aria-labelledby="operation_get-one-custome">
+	<div class="operation__content">
+        <h3 id="operation_get-one-custome">Get One Custome</h3>
+        <span class="operation--get operation--default">GET</span> <span class="operation__url">/Customer/{ID}</span>
+	<div class="definition__content definition">
+			<div>
+				<h4>Request</h4>
+		
+
+<table>
+  <caption class="request__path-variables">Path variables</caption><thead class="sr-only">
+    <tr>
+      <th scope="col">Name</th>
+      <th scope="col">Description</th>
+      <th scope="col">Type</th>
+      <th scope="col">Attributes and examples</th>
+    </tr>
+  </thead>
+  <tbody>
+  
+      
+
+
+<tr class="request__parameter">
+	<th class="request__parameter-type-label" scope="row">ID</th>
+	<td class="wysiwyg"></td>
+	<td class="request__parameter-type">
+    <span class="parameter-type">
+      
+
+string</span>
+<span class="badge badge--warn">Required</span></td>
+	<td class="request__parameter-attributes-examples">
+
+
+
+</td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+</div>
+		
+
+</div>
+	<div class="definition__content definition">
+			<h4>Response</h4>
+		
+		
+				
+					
+
+<div class="response">
+	<details class="response__detail" open="">
+		<summary class="response__type"><span><span class="badge badge--2xx">200</span>Status 200</span><svg viewBox="0 0 16 16" aria-hidden="true" class="response__type--icon"><path d="M8 13.6l-8-8L2.6 3 8 8.4 13.4 3 16 5.6z"></path></svg></summary>
+		<div class="response-description wysiwyg">It ok</div>
+
+
+
+<div class="response__content">
+    <span class="response__body">Body</span>
+    <div class="dropdown">
+    <span class="response__mimetype">application/json</span></div>
+</div>
+
+    <div id="body_c828b73b04be3e55b88cf14969470b5capplicationjson" class="body__content" >
+    <div class="body__content">
+
+
+
+
+<a href="#type_customer">Customer</a>
+<button type="button" class="btn--naked tooltip js-tooltip-trigger" aria-expanded="false" aria-haspopup="true" aria-controls="tooltip_type_customer">
+	<span class="sr-only">Customer details</span>
+	<svg class="tooltip__icon" viewBox="0 0 16 16" aria-hidden="true"><g><path d="M8,0 C12.418278,0 16,3.581722 16,8 C16,12.418278 12.418278,16 8,16 C3.581722,16 0,12.418278 0,8 C0,3.581722 3.581722,0 8,0 Z M7.88888889,6.11262338 C7.39796911,6.11262338 7,6.51059249 7,7.00151227 L7,11.4459567 C7,11.9368765 7.39796911,12.3348456 7.88888889,12.3348456 C8.37980867,12.3348456 8.77777778,11.9368765 8.77777778,11.4459567 L8.77777778,7.00151227 C8.77777778,6.51059249 8.37980867,6.11262338 7.88888889,6.11262338 Z M7.88888889,3.44293218 C7.39796911,3.44293218 7,3.84090129 7,4.33182107 C7,4.82274084 7.39796911,5.22070996 7.88888889,5.22070996 C8.37980867,5.22070996 8.77777778,4.82274084 8.77777778,4.33182107 C8.77777778,3.84090129 8.37980867,3.44293218 7.88888889,3.44293218 Z"></path></g></svg>
+</button>
+</div>
+        <div class="definition-example">
+        <div id="bodySample_c828b73b04be3e55b88cf14969470b5capplicationjson" class="definition-example__title">
+            <span>Status 200</span><span class="definition-example__mimetype">
+                    application/json</span>
+            </div>
+        <div role="region" tabindex="0" class="code-container" aria-labelledby="bodySample_c828b73b04be3e55b88cf14969470b5capplicationjson">
+
+
+	
+		<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl"><span class="p">{</span><span class="nt">&#34;ID&#34;</span><span class="p">:</span> <span class="s2">&#34;1234&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl"><span class="nt">&#34;NAME&#34;</span><span class="p">:</span> <span class="s2">&#34;Alice&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl"><span class="nt">&#34;LAST NAME&#34;</span><span class="p">:</span> <span class="s2">&#34;Khayati&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl"><span class="nt">&#34;MAIL&#34;</span><span class="p">:</span> <span class="s2">&#34;Sofiene.Khayati@agilos.com&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl"><span class="nt">&#34;PHONE&#34;</span><span class="p">:</span> <span class="s2">&#34;0465784646&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl"><span class="nt">&#34;STREET_NUMBER&#34;</span><span class="p">:</span> <span class="s2">&#34;11&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl"><span class="nt">&#34;CITY&#34;</span><span class="p">:</span> <span class="s2">&#34;Brussels&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl"><span class="nt">&#34;DEPARTMENT&#34;</span><span class="p">:</span> <span class="s2">&#34;Brussels&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl"><span class="nt">&#34;REGION&#34;</span><span class="p">:</span> <span class="s2">&#34;Brussels&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl"><span class="nt">&#34;COUNTRY&#34;</span><span class="p">:</span> <span class="s2">&#34;Belgium&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl"><span class="nt">&#34;POSTAL_CODE&#34;</span><span class="p">:</span> <span class="s2">&#34;1000&#34;</span><span class="p">}</span></span></span></code></pre></div></div>
+    </div>
+        </div>
+    </details>
+</div>
+</div>
+	</div>
+	<div class="operation__content-info operation__content-info--odd">
+		
+<div class="try-in-tester js-try-in-tester">
+  <button class="try-in-tester__action js-try-in-tester--action btn btn--primary js-operation-try-in-tester try-in-tester__action--with-dropdown "
+          data-operation-id="fec49c85-fa60-4e26-bb40-9d53490ef491" type="button">
+    Try in API Tester
+    (2)</button>
+  <button title="Select your endpoint" class="try-in-tester__dropdown js-dropdown btn btn--primary"
+    aria-controls="endpoints-list"
+    aria-label="Select your endpoint"
+    aria-haspopup="true"
+    aria-expanded="false"
+    type="button">
+      <svg viewBox="0 0 16 16" aria-hidden="true" class="dropdown__icon"><path d="M8 13.6l-8-8L2.6 3 8 8.4 13.4 3 16 5.6z"></path></svg>
+    </button>
+    <div id="endpoints-list"
+         role="menu"
+         class="dropdown__content dropdown__content--endpoints dropdown__content--endpoints-operation "
+         hidden>
+      <button title="https://2ig912ru1eka29u.eu.api-mocks.com"
+                data-endpoint-url="https://2ig912ru1eka29u.eu.api-mocks.com"
+                role="menuitem"
+                class="js-try-in-tester-endpoint dropdown__item dropdown__item--endpoints btn--naked"
+                type="button">
+          <span class="text--ellipsis dropdown__item--endpoints-url">https://2ig912ru1eka29u.eu.api-mocks.com</span></button>
+      <button title="http://www.agilos.com"
+                data-endpoint-url="http://www.agilos.com"
+                role="menuitem"
+                class="js-try-in-tester-endpoint dropdown__item dropdown__item--endpoints btn--naked"
+                type="button">
+          <span class="text--ellipsis dropdown__item--endpoints-url">http://www.agilos.com</span></button>
+      <a role="menuitem"
+         class="dropdown__item dropdown__item--endpoints-link-description"
+         href="#endpoints">
+        Go to endpoint descriptions</a>
+    </div>
+  </div>
+
+</div>
+</section>
+
+
 <section id="type_customer_anchor" class="datatype" aria-labelledby="type_customer">
 	<div class="data-type__content">
 		<div class="data-type__header">
@@ -153,7 +600,7 @@
 		</div>
 		<div class="definition__data-type definition">
 			<div id="tooltip_type_customer" class="js-tooltip-content" >
-
+<div class="data-type__description wysiwyg">Customer informations</div>
 	
 
 
@@ -177,7 +624,7 @@
 
 <tr class="data-type__parameter">
 	<th class="data-type__parameter-type-label" scope="row">ID</th>
-	<td class="wysiwyg"></td>
+	<td class="wysiwyg">Customer ID</td>
 	<td class="data-type__parameter-type">
     <span class="parameter-type">
       
@@ -188,7 +635,7 @@ integer</span>
 
 
 
-</td>
+<div class="data-type__parameter-attribute-example"><span class="metadata__label">Format</span><span class="badge">INT32</span></div></td>
 </tr>
 
       
@@ -196,7 +643,7 @@ integer</span>
 
 <tr class="data-type__parameter">
 	<th class="data-type__parameter-type-label" scope="row">NAME</th>
-	<td class="wysiwyg"></td>
+	<td class="wysiwyg">Customer Name</td>
 	<td class="data-type__parameter-type">
     <span class="parameter-type">
       
@@ -215,7 +662,7 @@ string</span>
 
 <tr class="data-type__parameter">
 	<th class="data-type__parameter-type-label" scope="row">LAST NAME</th>
-	<td class="wysiwyg"></td>
+	<td class="wysiwyg">Customer Last Name</td>
 	<td class="data-type__parameter-type">
     <span class="parameter-type">
       
@@ -234,7 +681,7 @@ string</span>
 
 <tr class="data-type__parameter">
 	<th class="data-type__parameter-type-label" scope="row">MAIL</th>
-	<td class="wysiwyg"></td>
+	<td class="wysiwyg">Customer Email</td>
 	<td class="data-type__parameter-type">
     <span class="parameter-type">
       
@@ -253,7 +700,7 @@ string</span>
 
 <tr class="data-type__parameter">
 	<th class="data-type__parameter-type-label" scope="row">PHONE</th>
-	<td class="wysiwyg"></td>
+	<td class="wysiwyg">Customer Phone</td>
 	<td class="data-type__parameter-type">
     <span class="parameter-type">
       
@@ -271,8 +718,8 @@ string</span>
 
 
 <tr class="data-type__parameter">
-	<th class="data-type__parameter-type-label" scope="row">STREET</th>
-	<td class="wysiwyg"></td>
+	<th class="data-type__parameter-type-label" scope="row">STREET_NUMBER</th>
+	<td class="wysiwyg">Customer Adress Street Number</td>
 	<td class="data-type__parameter-type">
     <span class="parameter-type">
       
@@ -291,7 +738,7 @@ string</span>
 
 <tr class="data-type__parameter">
 	<th class="data-type__parameter-type-label" scope="row">CITY</th>
-	<td class="wysiwyg"></td>
+	<td class="wysiwyg">Customer City</td>
 	<td class="data-type__parameter-type">
     <span class="parameter-type">
       
@@ -310,7 +757,7 @@ string</span>
 
 <tr class="data-type__parameter">
 	<th class="data-type__parameter-type-label" scope="row">DEPARTMENT</th>
-	<td class="wysiwyg"></td>
+	<td class="wysiwyg">Customer Department</td>
 	<td class="data-type__parameter-type">
     <span class="parameter-type">
       
@@ -329,7 +776,7 @@ string</span>
 
 <tr class="data-type__parameter">
 	<th class="data-type__parameter-type-label" scope="row">REGION</th>
-	<td class="wysiwyg"></td>
+	<td class="wysiwyg">Customer Region</td>
 	<td class="data-type__parameter-type">
     <span class="parameter-type">
       
@@ -348,7 +795,7 @@ string</span>
 
 <tr class="data-type__parameter">
 	<th class="data-type__parameter-type-label" scope="row">COUNTRY</th>
-	<td class="wysiwyg"></td>
+	<td class="wysiwyg">Customer Country</td>
 	<td class="data-type__parameter-type">
     <span class="parameter-type">
       
@@ -367,7 +814,7 @@ string</span>
 
 <tr class="data-type__parameter">
 	<th class="data-type__parameter-type-label" scope="row">POSTAL_CODE</th>
-	<td class="wysiwyg"></td>
+	<td class="wysiwyg">Customer Zip Code</td>
 	<td class="data-type__parameter-type">
     <span class="parameter-type">
       
@@ -378,15 +825,15 @@ integer</span>
 
 
 
-</td>
+<div class="data-type__parameter-attribute-example"><span class="metadata__label">Format</span><span class="badge">INT32</span></div></td>
 </tr>
 </tbody>
 </table>
 </div>
 
 <div class="definition-example">
-				<div id="type_customer_7866b8659aecb7f4c28163151175af68" class="definition-example__title"><span>Customer</span></div>
-				<div role="region" tabindex="0" class="code-container" aria-labelledby="type_customer_7866b8659aecb7f4c28163151175af68">
+				<div id="type_customer_8751e66ac53117918b62a685fcb786f4" class="definition-example__title"><span>Customer</span></div>
+				<div role="region" tabindex="0" class="code-container" aria-labelledby="type_customer_8751e66ac53117918b62a685fcb786f4">
 
 
 	
@@ -416,7 +863,7 @@ integer</span>
 		</div>
 		<div class="definition__data-type definition">
 			<div id="tooltip_type_customers" class="js-tooltip-content" >
-
+<div class="data-type__description wysiwyg">List Customers</div>
 	
 
 
@@ -438,7 +885,7 @@ integer</span>
       
 
 <tr class="data-type__parameter">
-  <th class="data-type__parameter-type-label" scope="row" aria-describedby="4b111faff5bc26b020880d92d4e3890d">Customers</th>
+  <th class="data-type__parameter-type-label" scope="row" aria-describedby="c0b53f8a11f48dd0202be19846dfb209">Customers</th>
   <td></td>
   <td class="data-type__parameter-type">
     <span class="parameter-type">
@@ -450,7 +897,7 @@ array of Object
   <td class="data-type__parameter-attributes-examples">
 
 
-<table id="4b111faff5bc26b020880d92d4e3890d">
+<table id="c0b53f8a11f48dd0202be19846dfb209">
   <caption class="data-type-title sr-only">Datatype details</caption>
   <thead class="sr-only">
     <tr>
@@ -471,7 +918,7 @@ array of Object
 </td>
     </tr>
 <tr class="data-type__parameter array-parameter--description">
-      <th scope="row" aria-describedby="b76d20731a1db34a1cf04fa5abc451c4">Object</th>
+      <th scope="row" aria-describedby="da17a41dc476105fa4043bbcbc5f312a">Object</th>
       <td></td>
       <td class="data-type__parameter-attributes-examples">
 
@@ -483,7 +930,7 @@ array of Object
     <tr class="data-type__parameter--subtype">
       <td colspan="3">
 
-<table id="b76d20731a1db34a1cf04fa5abc451c4">
+<table id="da17a41dc476105fa4043bbcbc5f312a">
   <thead class="sr-only">
     <tr>
       <th scope="col">Name</th>
@@ -504,8 +951,8 @@ array of Object
     <span class="parameter-type">
       
 
-integer</span>
-<span class="badge badge--warn">Required</span></td>
+string</span>
+<span class="badge">Optional</span></td>
 	<td class="data-type__parameter-attributes-examples">
 
 
@@ -524,7 +971,7 @@ integer</span>
       
 
 string</span>
-<span class="badge badge--warn">Required</span></td>
+<span class="badge">Optional</span></td>
 	<td class="data-type__parameter-attributes-examples">
 
 
@@ -543,7 +990,7 @@ string</span>
       
 
 string</span>
-<span class="badge badge--warn">Required</span></td>
+<span class="badge">Optional</span></td>
 	<td class="data-type__parameter-attributes-examples">
 
 
@@ -694,7 +1141,7 @@ string</span>
     <span class="parameter-type">
       
 
-integer</span>
+string</span>
 <span class="badge">Optional</span></td>
 	<td class="data-type__parameter-attributes-examples">
 
@@ -716,8 +1163,8 @@ integer</span>
 </div>
 
 <div class="definition-example">
-				<div id="type_customers_666c184b135c871aa167258b98e76ff5" class="definition-example__title"><span>Customers</span></div>
-				<div role="region" tabindex="0" class="code-container" aria-labelledby="type_customers_666c184b135c871aa167258b98e76ff5">
+				<div id="type_customers_7578ec51889cb61ba853f2f16a616764" class="definition-example__title"><span>Customers</span></div>
+				<div role="region" tabindex="0" class="code-container" aria-labelledby="type_customers_7578ec51889cb61ba853f2f16a616764">
 
 
 	
@@ -780,379 +1227,6 @@ integer</span>
 			</div>
 </div>
 	</div>
-</section>
-
-
-<section id="operation_list-of-customer_anchor" class="operation" aria-labelledby="operation_list-of-customer">
-	<div class="operation__content">
-        <h3 id="operation_list-of-customer">List of customer</h3>
-        <span class="operation--get operation--default">GET</span> <span class="operation__url">/Customers</span>
-	<div class="definition__content definition">
-			<h4>Response</h4>
-		
-		
-				
-					
-
-<div class="response">
-	<details class="response__detail" open="">
-		<summary class="response__type"><span><span class="badge badge--2xx">200</span>Status 200</span><svg viewBox="0 0 16 16" aria-hidden="true" class="response__type--icon"><path d="M8 13.6l-8-8L2.6 3 8 8.4 13.4 3 16 5.6z"></path></svg></summary>
-		<div class="response-description wysiwyg">List found</div>
-
-
-
-<div class="response__content">
-    <span class="response__body">Body</span>
-    <div class="dropdown">
-    <span class="response__mimetype">application/json</span></div>
-</div>
-
-    <div id="body_92b5885b5041cb49e4b7b7833086ecfcapplicationjson" class="body__content" >
-    <div class="body__content">
-
-
-
-
-<table>
-  <caption class="data-type-title sr-only"> details</caption>
-  <thead class="sr-only">
-    <tr>
-      <th scope="col">Name</th>
-      <th scope="col">Description</th>
-      <th scope="col">Type</th>
-      <th scope="col">Attributes and examples</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr class="response-body__parameter response-body__array-type-details">
-      <th class="response-body__parameter-type-label" scope="row" aria-describedby="c60c3b40ac0be2cc02ef33fc4f43d4af">
-
-
-array of 
-
-string
-
-      </th>
-      <td class="response-body__parameter-attributes-examples">
-
-
-<table id="c60c3b40ac0be2cc02ef33fc4f43d4af">
-  <caption class="response-body-title sr-only">Datatype details</caption>
-  <thead class="sr-only">
-    <tr>
-      <th scope="col">Type</th>
-      <th scope="col">Description</th>
-      <th scope="col">Attributes and examples</th>
-    </tr>
-  </thead>
-  <tbody>
-<tr class="response-body__parameter response-body__array-first-type">
-      <th scope="row">array</th>
-      <td></td>
-      <td class="response-body__parameter-attributes-examples">
-  
-    
-
-</td>
-    </tr>
-<tr class="response-body__parameter array-parameter--description">
-      <th scope="row">
-      string</th>
-      <td></td>
-      <td class="response-body__parameter-attributes-examples">
-
-
-
-</td>
-    </tr>
-  </tbody>
-</table>
-
-      </td>
-      <td colspan="2"></td>
-    </tr>
-  </tbody>
-</table>
-</div>
-        <div class="definition-example">
-        <div id="bodySample_92b5885b5041cb49e4b7b7833086ecfcapplicationjson" class="definition-example__title">
-            <span>Status 200</span><span class="definition-example__mimetype">
-                    application/json</span>
-            </div>
-        <div role="region" tabindex="0" class="code-container" aria-labelledby="bodySample_92b5885b5041cb49e4b7b7833086ecfcapplicationjson">
-
-
-	
-		<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl"><span class="p">{</span>
-</span></span><span class="line"><span class="cl"><span class="nt">&#34;Customers&#34;</span><span class="p">:[</span>
-</span></span><span class="line"><span class="cl">    <span class="p">{</span>
-</span></span><span class="line"><span class="cl">        <span class="nt">&#34;ID&#34;</span><span class="p">:</span> <span class="s2">&#34;1234&#34;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">        <span class="nt">&#34;NAME&#34;</span><span class="p">:</span> <span class="s2">&#34;Alice&#34;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">        <span class="nt">&#34;LAST_NAME&#34;</span><span class="p">:</span> <span class="s2">&#34;Khayati&#34;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">        <span class="nt">&#34;MAIL&#34;</span><span class="p">:</span> <span class="s2">&#34;Sofiene.Khayati@agilos.com&#34;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">        <span class="nt">&#34;PHONE&#34;</span><span class="p">:</span> <span class="s2">&#34;0465784646&#34;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">        <span class="nt">&#34;STREET_NUMBER&#34;</span><span class="p">:</span> <span class="s2">&#34;11&#34;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">        <span class="nt">&#34;CITY&#34;</span><span class="p">:</span> <span class="s2">&#34;Brussels&#34;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">        <span class="nt">&#34;DEPARTMENT&#34;</span><span class="p">:</span> <span class="s2">&#34;Brussels&#34;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">        <span class="nt">&#34;REGION&#34;</span><span class="p">:</span> <span class="s2">&#34;Brussels&#34;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">        <span class="nt">&#34;COUNTRY&#34;</span><span class="p">:</span> <span class="s2">&#34;Belgium&#34;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">        <span class="nt">&#34;POSTAL_CODE&#34;</span><span class="p">:</span> <span class="s2">&#34;1000&#34;</span>
-</span></span><span class="line"><span class="cl">    <span class="p">},</span>
-</span></span><span class="line"><span class="cl">    <span class="p">{</span>
-</span></span><span class="line"><span class="cl">        <span class="nt">&#34;ID&#34;</span><span class="p">:</span> <span class="s2">&#34;1920&#34;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">        <span class="nt">&#34;NAME&#34;</span><span class="p">:</span> <span class="s2">&#34;Sofiene&#34;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">        <span class="nt">&#34;LAST_NAME&#34;</span><span class="p">:</span> <span class="s2">&#34;Khayati&#34;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">        <span class="nt">&#34;MAIL&#34;</span><span class="p">:</span> <span class="s2">&#34;Sofiene.Khayati@agilos.com&#34;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">        <span class="nt">&#34;PHONE&#34;</span><span class="p">:</span> <span class="s2">&#34;0465784646&#34;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">        <span class="nt">&#34;STREET_NUMBER&#34;</span><span class="p">:</span> <span class="s2">&#34;12&#34;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">        <span class="nt">&#34;CITY&#34;</span><span class="p">:</span> <span class="s2">&#34;Ixelles&#34;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">        <span class="nt">&#34;DEPARTMENT&#34;</span><span class="p">:</span> <span class="s2">&#34;Brussels&#34;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">        <span class="nt">&#34;REGION&#34;</span><span class="p">:</span> <span class="s2">&#34;Brussels&#34;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">        <span class="nt">&#34;COUNTRY&#34;</span><span class="p">:</span> <span class="s2">&#34;Belgium&#34;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">        <span class="nt">&#34;POSTAL_CODE&#34;</span><span class="p">:</span> <span class="s2">&#34;1050&#34;</span>
-</span></span><span class="line"><span class="cl">    <span class="p">}</span>
-</span></span><span class="line"><span class="cl"><span class="p">]</span>
-</span></span><span class="line"><span class="cl"><span class="p">}</span></span></span></code></pre></div></div>
-    </div>
-        </div>
-    </details>
-</div>
-
-				
-
-<div class="response">
-	<details class="response__detail" >
-		<summary class="response__type"><span><span class="badge badge--4xx">404</span>Status 404</span><svg viewBox="0 0 16 16" aria-hidden="true" class="response__type--icon"><path d="M8 13.6l-8-8L2.6 3 8 8.4 13.4 3 16 5.6z"></path></svg></summary>
-		<div class="response-description wysiwyg">Not Found</div>
-
-
-
-<div class="response__content">
-    <span class="response__body">Body</span>
-    <div class="dropdown">
-    <span class="response__mimetype">application/json</span></div>
-</div>
-
-    <div id="body_30478c4649539c8fb725beb81c850bbeapplicationjson" class="body__content" >
-    <div>Return all customer</div><div class="body__content">
-
-
-
-
-<div class="data-type__object-title">Object</div>
-
-
-</div>
-        <div class="definition-example">
-        <div id="bodySample_30478c4649539c8fb725beb81c850bbeapplicationjson" class="definition-example__title">
-            <span>Status 404</span><span class="definition-example__mimetype">
-                    application/json</span>
-            </div>
-        <div role="region" tabindex="0" class="code-container" aria-labelledby="bodySample_30478c4649539c8fb725beb81c850bbeapplicationjson">
-
-
-	
-		<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl"><span class="p">{</span>
-</span></span><span class="line"><span class="cl"><span class="nt">&#34;Customers&#34;</span><span class="p">:[</span>
-</span></span><span class="line"><span class="cl">    <span class="p">{</span>
-</span></span><span class="line"><span class="cl">        <span class="nt">&#34;ID&#34;</span><span class="p">:</span> <span class="s2">&#34;1234&#34;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">        <span class="nt">&#34;NAME&#34;</span><span class="p">:</span> <span class="s2">&#34;Alice&#34;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">        <span class="nt">&#34;LAST_NAME&#34;</span><span class="p">:</span> <span class="s2">&#34;Khayati&#34;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">        <span class="nt">&#34;MAIL&#34;</span><span class="p">:</span> <span class="s2">&#34;Sofiene.Khayati@agilos.com&#34;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">        <span class="nt">&#34;PHONE&#34;</span><span class="p">:</span> <span class="s2">&#34;0465784646&#34;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">        <span class="nt">&#34;STREET_NUMBER&#34;</span><span class="p">:</span> <span class="s2">&#34;11&#34;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">        <span class="nt">&#34;CITY&#34;</span><span class="p">:</span> <span class="s2">&#34;Brussels&#34;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">        <span class="nt">&#34;DEPARTMENT&#34;</span><span class="p">:</span> <span class="s2">&#34;Brussels&#34;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">        <span class="nt">&#34;REGION&#34;</span><span class="p">:</span> <span class="s2">&#34;Brussels&#34;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">        <span class="nt">&#34;COUNTRY&#34;</span><span class="p">:</span> <span class="s2">&#34;Belgium&#34;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">        <span class="nt">&#34;POSTAL_CODE&#34;</span><span class="p">:</span> <span class="s2">&#34;1000&#34;</span>
-</span></span><span class="line"><span class="cl">    <span class="p">},</span>
-</span></span><span class="line"><span class="cl">    <span class="p">{</span>
-</span></span><span class="line"><span class="cl">        <span class="nt">&#34;ID&#34;</span><span class="p">:</span> <span class="s2">&#34;1920&#34;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">        <span class="nt">&#34;NAME&#34;</span><span class="p">:</span> <span class="s2">&#34;Sofiene&#34;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">        <span class="nt">&#34;LAST_NAME&#34;</span><span class="p">:</span> <span class="s2">&#34;Khayati&#34;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">        <span class="nt">&#34;MAIL&#34;</span><span class="p">:</span> <span class="s2">&#34;Sofiene.Khayati@agilos.com&#34;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">        <span class="nt">&#34;PHONE&#34;</span><span class="p">:</span> <span class="s2">&#34;0465784646&#34;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">        <span class="nt">&#34;STREET_NUMBER&#34;</span><span class="p">:</span> <span class="s2">&#34;12&#34;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">        <span class="nt">&#34;CITY&#34;</span><span class="p">:</span> <span class="s2">&#34;Ixelles&#34;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">        <span class="nt">&#34;DEPARTMENT&#34;</span><span class="p">:</span> <span class="s2">&#34;Brussels&#34;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">        <span class="nt">&#34;REGION&#34;</span><span class="p">:</span> <span class="s2">&#34;Brussels&#34;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">        <span class="nt">&#34;COUNTRY&#34;</span><span class="p">:</span> <span class="s2">&#34;Belgium&#34;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">        <span class="nt">&#34;POSTAL_CODE&#34;</span><span class="p">:</span> <span class="s2">&#34;1050&#34;</span>
-</span></span><span class="line"><span class="cl">    <span class="p">},</span>
-</span></span><span class="line"><span class="cl">    <span class="p">{</span>
-</span></span><span class="line"><span class="cl">        <span class="nt">&#34;ID&#34;</span><span class="p">:</span> <span class="s2">&#34;1920&#34;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">        <span class="nt">&#34;NAME&#34;</span><span class="p">:</span> <span class="s2">&#34;Lina&#34;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">        <span class="nt">&#34;LAST_NAME&#34;</span><span class="p">:</span> <span class="s2">&#34;Khayati&#34;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">        <span class="nt">&#34;MAIL&#34;</span><span class="p">:</span> <span class="s2">&#34;Sofiene.Khayati@agilos.com&#34;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">        <span class="nt">&#34;PHONE&#34;</span><span class="p">:</span> <span class="s2">&#34;0465784646&#34;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">        <span class="nt">&#34;STREET_NUMBER&#34;</span><span class="p">:</span> <span class="s2">&#34;12&#34;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">        <span class="nt">&#34;CITY&#34;</span><span class="p">:</span> <span class="s2">&#34;Ixelles&#34;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">        <span class="nt">&#34;DEPARTMENT&#34;</span><span class="p">:</span> <span class="s2">&#34;Brussels&#34;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">        <span class="nt">&#34;REGION&#34;</span><span class="p">:</span> <span class="s2">&#34;Brussels&#34;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">        <span class="nt">&#34;COUNTRY&#34;</span><span class="p">:</span> <span class="s2">&#34;Belgium&#34;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">        <span class="nt">&#34;POSTAL_CODE&#34;</span><span class="p">:</span> <span class="s2">&#34;1050&#34;</span>
-</span></span><span class="line"><span class="cl">    <span class="p">},</span>
-</span></span><span class="line"><span class="cl">    <span class="p">{</span>
-</span></span><span class="line"><span class="cl">        <span class="nt">&#34;ID&#34;</span><span class="p">:</span> <span class="s2">&#34;1920&#34;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">        <span class="nt">&#34;NAME&#34;</span><span class="p">:</span> <span class="s2">&#34;Henri&#34;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">        <span class="nt">&#34;LAST_NAME&#34;</span><span class="p">:</span> <span class="s2">&#34;Van Den Berghe&#34;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">        <span class="nt">&#34;MAIL&#34;</span><span class="p">:</span> <span class="s2">&#34;Sofiene.Khayati@agilos.com&#34;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">        <span class="nt">&#34;PHONE&#34;</span><span class="p">:</span> <span class="s2">&#34;0465784646&#34;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">        <span class="nt">&#34;STREET_NUMBER&#34;</span><span class="p">:</span> <span class="s2">&#34;1&#34;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">        <span class="nt">&#34;CITY&#34;</span><span class="p">:</span> <span class="s2">&#34;Saint Gilles&#34;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">        <span class="nt">&#34;DEPARTMENT&#34;</span><span class="p">:</span> <span class="s2">&#34;Brussels&#34;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">        <span class="nt">&#34;REGION&#34;</span><span class="p">:</span> <span class="s2">&#34;Brussels&#34;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">        <span class="nt">&#34;COUNTRY&#34;</span><span class="p">:</span> <span class="s2">&#34;Belgium&#34;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">        <span class="nt">&#34;POSTAL_CODE&#34;</span><span class="p">:</span> <span class="s2">&#34;1060&#34;</span>
-</span></span><span class="line"><span class="cl">    <span class="p">}</span>
-</span></span><span class="line"><span class="cl"><span class="p">]</span>
-</span></span><span class="line"><span class="cl"><span class="p">}</span></span></span></code></pre></div></div>
-    </div>
-        </div>
-    </details>
-</div>
-</div>
-	</div>
-	<div class="operation__content-info operation__content-info--odd">
-		
-<div class="try-in-tester js-try-in-tester">
-  <button class="try-in-tester__action js-try-in-tester--action btn btn--primary js-operation-try-in-tester "
-          data-operation-id="7a49026f-0b2a-4d0e-ba42-ea41d3578781" type="button">
-    Try in API Tester
-    </button>
-  </div>
-
-</div>
-</section>
-
-
-<section id="operation_get-one-customer_anchor" class="operation" aria-labelledby="operation_get-one-customer">
-	<div class="operation__content">
-        <h3 id="operation_get-one-customer">Get one customer</h3>
-        <span class="operation--get operation--default">GET</span> <span class="operation__url">/Customers/{ID}</span>
-	<div class="definition__content definition">
-			<div>
-				<h4>Request</h4>
-		
-
-<table>
-  <caption class="request__path-variables">Path variables</caption><thead class="sr-only">
-    <tr>
-      <th scope="col">Name</th>
-      <th scope="col">Description</th>
-      <th scope="col">Type</th>
-      <th scope="col">Attributes and examples</th>
-    </tr>
-  </thead>
-  <tbody>
-  
-      
-
-
-<tr class="request__parameter">
-	<th class="request__parameter-type-label" scope="row">ID</th>
-	<td class="wysiwyg"></td>
-	<td class="request__parameter-type">
-    <span class="parameter-type">
-      
-
-string</span>
-<span class="badge badge--warn">Required</span></td>
-	<td class="request__parameter-attributes-examples">
-
-
-
-</td>
-</tr>
-</tbody>
-</table>
-
-
-
-
-</div>
-		
-
-</div>
-	<div class="definition__content definition">
-			<h4>Response</h4>
-		
-		
-				
-					
-
-<div class="response">
-	<details class="response__detail" open="">
-		<summary class="response__type"><span><span class="badge badge--2xx">200</span>Status 200</span><svg viewBox="0 0 16 16" aria-hidden="true" class="response__type--icon"><path d="M8 13.6l-8-8L2.6 3 8 8.4 13.4 3 16 5.6z"></path></svg></summary>
-		<div class="response-description wysiwyg">Customer retreived</div>
-
-
-
-<div class="response__content">
-    <span class="response__body">Body</span>
-    <div class="dropdown">
-    <span class="response__mimetype">application/json</span></div>
-</div>
-
-    <div id="body_c591b86bb573c378e44b89c820bef504applicationjson" class="body__content" >
-    <div class="body__content">
-
-
-
-
-<div class="data-type__object-title">Object</div>
-
-
-</div>
-        <div class="definition-example">
-        <div id="bodySample_c591b86bb573c378e44b89c820bef504applicationjson" class="definition-example__title">
-            <span>Status 200</span><span class="definition-example__mimetype">
-                    application/json</span>
-            </div>
-        <div role="region" tabindex="0" class="code-container" aria-labelledby="bodySample_c591b86bb573c378e44b89c820bef504applicationjson">
-
-
-	
-		<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl"><span class="p">{</span><span class="nt">&#34;ID&#34;</span><span class="p">:</span> <span class="s2">&#34;1234&#34;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl"><span class="nt">&#34;NAME&#34;</span><span class="p">:</span> <span class="s2">&#34;Alice&#34;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl"><span class="nt">&#34;LAST NAME&#34;</span><span class="p">:</span> <span class="s2">&#34;Khayati&#34;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl"><span class="nt">&#34;MAIL&#34;</span><span class="p">:</span> <span class="s2">&#34;Sofiene.Khayati@agilos.com&#34;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl"><span class="nt">&#34;PHONE&#34;</span><span class="p">:</span> <span class="s2">&#34;0465784646&#34;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl"><span class="nt">&#34;STREET_NUMBER&#34;</span><span class="p">:</span> <span class="s2">&#34;11&#34;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl"><span class="nt">&#34;CITY&#34;</span><span class="p">:</span> <span class="s2">&#34;Brussels&#34;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl"><span class="nt">&#34;DEPARTMENT&#34;</span><span class="p">:</span> <span class="s2">&#34;Brussels&#34;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl"><span class="nt">&#34;REGION&#34;</span><span class="p">:</span> <span class="s2">&#34;Brussels&#34;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl"><span class="nt">&#34;COUNTRY&#34;</span><span class="p">:</span> <span class="s2">&#34;Belgium&#34;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl"><span class="nt">&#34;POSTAL_CODE&#34;</span><span class="p">:</span> <span class="s2">&#34;1000&#34;</span><span class="p">}</span></span></span></code></pre></div></div>
-    </div>
-        </div>
-    </details>
-</div>
-
-				
-
-<div class="response">
-	<details class="response__detail" >
-		<summary class="response__type"><span><span class="badge badge--4xx">404</span>Status 404</span><svg viewBox="0 0 16 16" aria-hidden="true" class="response__type--icon"><path d="M8 13.6l-8-8L2.6 3 8 8.4 13.4 3 16 5.6z"></path></svg></summary>
-		<div class="response-description wysiwyg">Customer not found</div>
-
-
-
-</details>
-</div>
-</div>
-	</div>
-	<div class="operation__content-info operation__content-info--odd">
-		
-<div class="try-in-tester js-try-in-tester">
-  <button class="try-in-tester__action js-try-in-tester--action btn btn--primary js-operation-try-in-tester "
-          data-operation-id="a33cbd28-b630-4155-ba74-1c47648eb8c9" type="button">
-    Try in API Tester
-    </button>
-  </div>
-
-</div>
 </section>
 <span class="back-to-top-wrapper"><a class="back-to-top" href="#"><span class="sr-only">back to top</span>↑</a></span></main>
     <footer class="footer">
