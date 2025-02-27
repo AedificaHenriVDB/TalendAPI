@@ -65,11 +65,11 @@
             "delimiter" : "&",
             "items" : [ {
               "name" : "dateFrom",
-              "value" : "2025-02-01",
+              "value" : "20250201",
               "enabled" : false
             }, {
               "name" : "dateTo",
-              "value" : "2025-02-01",
+              "value" : "20250201",
               "enabled" : false
             } ]
           }
@@ -94,7 +94,7 @@
       "projectId" : "fd857daa-675c-418f-b8cd-ed6a47e0e59b"
     },
     "variables" : {
-      "f84f5e35-4abf-43aa-b51e-ca6fa0a0c93f" : {
+      "20f892e9-69d5-48f1-a183-56ff0ffd0f9d" : {
         "name" : "BaseUrl",
         "value" : "https://2ig912ru1eka29u.eu.api-mocks.com",
         "enabled" : true,
@@ -107,7 +107,7 @@
       "projectId" : "fd857daa-675c-418f-b8cd-ed6a47e0e59b"
     },
     "variables" : {
-      "ab3ad42e-222e-417a-a7af-d109c5d30e91" : {
+      "5792e2a1-0114-4cbb-be1e-e39fa470ccad" : {
         "name" : "BaseUrl",
         "value" : "http://www.agilos.com",
         "enabled" : true,
