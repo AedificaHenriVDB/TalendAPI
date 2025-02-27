@@ -205,34 +205,48 @@ api-definition:
         name: "Customers"
         type: "OBJECT"
         description: "List Customers"
+        required: false
         properties:
         - name: "Customers"
           type: "ARRAY"
+          required: false
           items:
             type: "OBJECT"
+            required: false
             properties:
             - name: "ID"
-              type: "STRING"
+              type: "INTEGER"
+              required: false
             - name: "NAME"
               type: "STRING"
+              required: false
             - name: "LAST_NAME"
               type: "STRING"
+              required: false
             - name: "MAIL"
               type: "STRING"
+              required: false
             - name: "PHONE"
               type: "STRING"
+              required: false
             - name: "STREET_NUMBER"
               type: "STRING"
+              required: false
             - name: "CITY"
               type: "STRING"
+              required: false
             - name: "DEPARTMENT"
               type: "STRING"
+              required: false
             - name: "REGION"
               type: "STRING"
+              required: false
             - name: "COUNTRY"
               type: "STRING"
+              required: false
             - name: "POSTAL_CODE"
-              type: "STRING"
+              type: "INTEGER"
+              required: false
         examples:
         - value: "{\r\n\"Customers\":[\r\n    {\r\n        \"ID\": \"1234\",\r\n        \"NAME\": \"Alice\",\r\n        \"LAST_NAME\": \"Khayati\",\r\n        \"MAIL\": \"Sofiene.Khayati@agilos.com\",\r\n        \"PHONE\": \"0465784646\",\r\n        \"STREET_NUMBER\": \"11\",\r\n        \"CITY\": \"Brussels\",\r\n        \"DEPARTMENT\": \"Brussels\",\r\n        \"REGION\": \"Brussels\",\r\n        \"COUNTRY\": \"Belgium\",\r\n        \"POSTAL_CODE\": \"1000\"\r\n    },\r\n    {\r\n        \"ID\": \"1920\",\r\n        \"NAME\": \"Sofiene\",\r\n        \"LAST_NAME\": \"Khayati\",\r\n        \"MAIL\": \"Sofiene.Khayati@agilos.com\",\r\n        \"PHONE\": \"0465784646\",\r\n        \"STREET_NUMBER\": \"12\",\r\n        \"CITY\": \"Ixelles\",\r\n        \"DEPARTMENT\": \"Brussels\",\r\n        \"REGION\": \"Brussels\",\r\n        \"COUNTRY\": \"Belgium\",\r\n        \"POSTAL_CODE\": \"1050\"\r\n    },\r\n    {\r\n        \"ID\": \"1920\",\r\n        \"NAME\": \"Lina\",\r\n        \"LAST_NAME\": \"Khayati\",\r\n        \"MAIL\": \"Sofiene.Khayati@agilos.com\",\r\n        \"PHONE\": \"0465784646\",\r\n        \"STREET_NUMBER\": \"12\",\r\n        \"CITY\": \"Ixelles\",\r\n        \"DEPARTMENT\": \"Brussels\",\r\n        \"REGION\": \"Brussels\",\r\n        \"COUNTRY\": \"Belgium\",\r\n        \"POSTAL_CODE\": \"1050\"\r\n    },\r\n    {\r\n        \"ID\": \"1920\",\r\n        \"NAME\": \"Henri\",\r\n        \"LAST_NAME\": \"Van Den Berghe\",\r\n        \"MAIL\": \"Sofiene.Khayati@agilos.com\",\r\n        \"PHONE\": \"0465784646\",\r\n        \"STREET_NUMBER\": \"1\",\r\n        \"CITY\": \"Saint Gilles\",\r\n        \"DEPARTMENT\": \"Brussels\",\r\n        \"REGION\": \"Brussels\",\r\n        \"COUNTRY\": \"Belgium\",\r\n        \"POSTAL_CODE\": \"1060\"\r\n    }\r\n]\r\n}"
   components: {}
@@ -320,7 +334,7 @@ api-tryin: |-
         "projectId" : "734b112a-2a3a-46fc-89ba-8020878eed42"
       },
       "variables" : {
-        "3b307669-ae31-4585-9286-9a97a0dcc79a" : {
+        "3c072389-42bb-4d36-8148-1bf28b888e8d" : {
           "name" : "BaseUrl",
           "value" : "http://127.0.0.0:8090",
           "enabled" : true,
@@ -333,7 +347,7 @@ api-tryin: |-
         "projectId" : "734b112a-2a3a-46fc-89ba-8020878eed42"
       },
       "variables" : {
-        "1ac6cd68-1416-4e1f-9820-82939f6a2615" : {
+        "4ee01ad3-8c2d-421f-bfb7-39af14296c75" : {
           "name" : "BaseUrl",
           "value" : "http://www.agilos.com",
           "enabled" : true,
