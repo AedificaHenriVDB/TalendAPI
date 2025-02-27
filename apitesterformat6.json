@@ -1,0 +1,66 @@
+{
+  "version" : 6,
+  "entities" : [ {
+    "entity" : {
+      "type" : "Project",
+      "name" : "API_DEMO 1.0.0",
+      "description" : "No description",
+      "importedFrom" : "734b112a-2a3a-46fc-89ba-8020878eed42"
+    },
+    "children" : [ {
+      "entity" : {
+        "type" : "Request",
+        "id" : "7a49026f-0b2a-4d0e-ba42-ea41d3578781",
+        "name" : "List of customer",
+        "uri" : {
+          "host" : "${\"BaseUrl\"}",
+          "path" : "/Customers"
+        },
+        "method" : {
+          "link" : "",
+          "name" : "GET"
+        },
+        "headers" : [ {
+          "enabled" : true,
+          "name" : "Accept",
+          "value" : "application/json"
+        } ],
+        "headersType" : "Form"
+      }
+    }, {
+      "entity" : {
+        "type" : "Request",
+        "id" : "a33cbd28-b630-4155-ba74-1c47648eb8c9",
+        "name" : "Get one customer",
+        "uri" : {
+          "host" : "${\"BaseUrl\"}",
+          "path" : "/Customers/{ID}"
+        },
+        "method" : {
+          "link" : "",
+          "name" : "GET"
+        },
+        "headers" : [ {
+          "enabled" : true,
+          "name" : "Accept",
+          "value" : "application/json"
+        } ],
+        "headersType" : "Form"
+      }
+    } ]
+  } ],
+  "environments" : [ {
+    "name" : "API_DEMO 1.0.0",
+    "importedFrom" : {
+      "projectId" : "734b112a-2a3a-46fc-89ba-8020878eed42"
+    },
+    "variables" : {
+      "07138071-0083-4856-8c16-8a164ae95c1f" : {
+        "name" : "BaseUrl",
+        "value" : "https://example.com",
+        "enabled" : true,
+        "private" : false
+      }
+    }
+  } ]
+}

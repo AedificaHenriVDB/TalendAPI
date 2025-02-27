@@ -1,0 +1,1184 @@
+
+
+<!doctype html>
+<html lang="en">
+	<head>
+    <meta data-indicator-element-id="dhcIndicator" name="dhc-aware-page" />
+      <meta name="try-in-tester-api-context" content="{&#34;etnResource6Url&#34;:&#34;/apitesterformat6.json&#34;}" />
+      <title>API_DEMO</title>
+      <meta content="API_DEMO" property="og:title">
+    
+
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+
+<meta property="og:type" content="website" />
+<meta property="og:url" content="/apis/api_demo/1.0.0/">
+
+
+<link rel="icon" href="../../../img/brand-logo.png" sizes="196x196" />
+<link rel="apple-touch-icon" href="../../../img/brand-logo.png" sizes="196x196" />
+
+<link rel="stylesheet" href="../../../css/full.min.e55d9236833ff9b3819e293fc402c2b5454b9015e74e6521a4916948975ee1f8.css" media="all" />
+
+
+<meta name="theme-color" content="#fafafa" />
+</head>
+	<body class="api-reference">
+		<header class="header">
+
+
+<ul class="header__menu">
+  <li class="header__item">
+    <a class="header__link header__brand " href="../../../" >
+      <span class="sr-only">Home</span>
+      <span>API Portal</span>
+    </a>
+  </li>
+<li class="header__item">
+    <a href="../../../getting-started/" class="header__link"  >Getting started</a>
+  </li>
+<li class="header__item">
+    <a href="../../../apis/" class="header__link header__section--active"  >APIs</a>
+  </li>
+</ul>
+</header>
+    <aside class="left-panel">
+        
+
+<div class="left-panel__wrapper">
+  <div class="api__general">
+    <h1 class="left-panel__api-title">API_DEMO</h1>
+
+
+<div class="dropdown api__version"><span class="btn btn__version api__version--selected">1.0.0</span>
+</div>
+</div>
+  <div class="api__action">
+    
+<div class="try-in-tester js-try-in-tester">
+  <button class="try-in-tester__action js-try-in-tester--action btn btn--primary js-api-try-in-tester "
+          type="button">
+    Try in API Tester
+    </button>
+  </div>
+
+
+<div class="dropdown">
+  <button class="js-dropdown btn btn--primary" aria-controls="download" aria-haspopup="true" aria-expanded="false" type="button">
+    Download<svg viewBox="0 0 16 16" aria-hidden="true" class="dropdown__icon"><path d="M8 13.6l-8-8L2.6 3 8 8.4 13.4 3 16 5.6z"></path></svg>
+  </button>
+  <div id="download" role="menu" class="dropdown__content" hidden>
+    <a href="../../../apis/api_demo/1.0.0/openapi30.json" role="menuitem" class="dropdown__item" tabindex="-1" download="api_demo-1.0.0-openapi30.json">OAS 3</a>
+    <a href="../../../apis/api_demo/1.0.0/swagger20.json" role="menuitem" class="dropdown__item" tabindex="-1" download="api_demo-1.0.0-swagger20.json">Swagger 2</a>
+    </div>
+  </div>
+</div>
+
+  <form class="search-form">
+    <label class="search-form__label" for="filter">
+      <svg class="search-form__icon" aria-hidden="true" width="16" height="16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M7.5 14C3.9 14 1 11.1 1 7.5S3.9 1 7.5 1 14 3.9 14 7.5 11.1 14 7.5 14zm0-11C5 3 3 5 3 7.5S5 12 7.5 12 12 10 12 7.5 10 3 7.5 3zm6 9c-.4.6-.9 1.1-1.5 1.5l2.5 2.5 1.5-1.5-2.5-2.5z"></path></svg>
+      <span class="sr-only">Filter</span>
+    </label>
+    <input class="search-form__field js-filter" id="filter" type="search" placeholder="Filter" />
+  </form>
+
+  <hr />
+
+  <nav class="api__nav" aria-label="API content">
+    <ul class="api-toc js-api-toc">
+<li><ul class="api-toc__content">
+    <li class="api-toc__item api-toc__item--datatype"><a href="#type_customer">Customer</a></li>
+    <li class="api-toc__item api-toc__item--datatype"><a href="#type_customers">Customers</a></li>
+    
+  <li class="api-toc__item api-toc__item--request-get"><a href="#operation_list-of-customer">List of customer</a></li>
+        
+  <li class="api-toc__item api-toc__item--request-get"><a href="#operation_get-one-customer">Get one customer</a></li>
+        </ul>
+</li>
+</ul>
+  </nav>
+</div>
+
+</aside>
+      <main id="content">
+        
+
+<nav class="breadcrumb" aria-label="Breadcrumb">
+	<ol class="breadcrumb__list">
+		<li class="breadcrumb__item"><a href="../../../" class="breadcrumb__element">Home</a></li>
+    <li class="breadcrumb__item"><span class="breadcrumb__separator" aria-hidden="true"> / </span><a href="../../../apis/" class="breadcrumb__element">APIs</a></li>
+
+  
+  <li class="breadcrumb__item"><span class="breadcrumb__separator" aria-hidden="true"> / </span><a aria-current="page" href="../../../apis/api_demo/1.0.0/" class="breadcrumb__element">API_DEMO</a></li>
+</ol>
+</nav>
+
+
+<h2 class="api-reference__api-title" id="top">API_DEMO</h2>
+<div class="api__content_description wysiwyg">No description</div>
+
+<dl class="definition contact">
+  </dl>
+<div class="definition">
+      <h3 id="mediatypes">Media type</h3>
+      <div>application/json</div>
+    </div>
+<div class="definition">
+      <h3 id="endpoints">Endpoints</h3>
+      <ul class="endpoints">
+        </ul>
+    </div>
+<div class="definition">
+      <h3 id="global-security">Global security</h3>
+      <p class="note">These security schemes apply to the entire API</p>
+      <div>
+        
+
+<ul class="global-security">
+
+<li class="global-security__type">No authentication</li>
+</ul>
+</div>
+    </div>
+
+
+
+<section id="type_customer_anchor" class="datatype" aria-labelledby="type_customer">
+	<div class="data-type__content">
+		<div class="data-type__header">
+			<h3 id="type_customer">Customer</h3>
+		</div>
+		<div class="definition__data-type definition">
+			<div id="tooltip_type_customer" class="js-tooltip-content" >
+
+	
+
+
+
+<div class="data-type__object-title">Object</div>
+
+
+<table>
+  <thead class="sr-only">
+    <tr>
+      <th scope="col">Name</th>
+      <th scope="col">Description</th>
+      <th scope="col">Type</th>
+      <th scope="col">Attributes and examples</th>
+    </tr>
+  </thead>
+  <tbody>
+  
+      
+
+
+<tr class="data-type__parameter">
+	<th class="data-type__parameter-type-label" scope="row">ID</th>
+	<td class="wysiwyg"></td>
+	<td class="data-type__parameter-type">
+    <span class="parameter-type">
+      
+
+integer</span>
+<span class="badge badge--warn">Required</span></td>
+	<td class="data-type__parameter-attributes-examples">
+
+
+
+</td>
+</tr>
+
+      
+
+
+<tr class="data-type__parameter">
+	<th class="data-type__parameter-type-label" scope="row">NAME</th>
+	<td class="wysiwyg"></td>
+	<td class="data-type__parameter-type">
+    <span class="parameter-type">
+      
+
+string</span>
+<span class="badge badge--warn">Required</span></td>
+	<td class="data-type__parameter-attributes-examples">
+
+
+
+</td>
+</tr>
+
+      
+
+
+<tr class="data-type__parameter">
+	<th class="data-type__parameter-type-label" scope="row">LAST NAME</th>
+	<td class="wysiwyg"></td>
+	<td class="data-type__parameter-type">
+    <span class="parameter-type">
+      
+
+string</span>
+<span class="badge badge--warn">Required</span></td>
+	<td class="data-type__parameter-attributes-examples">
+
+
+
+</td>
+</tr>
+
+      
+
+
+<tr class="data-type__parameter">
+	<th class="data-type__parameter-type-label" scope="row">MAIL</th>
+	<td class="wysiwyg"></td>
+	<td class="data-type__parameter-type">
+    <span class="parameter-type">
+      
+
+string</span>
+<span class="badge">Optional</span></td>
+	<td class="data-type__parameter-attributes-examples">
+
+
+
+</td>
+</tr>
+
+      
+
+
+<tr class="data-type__parameter">
+	<th class="data-type__parameter-type-label" scope="row">PHONE</th>
+	<td class="wysiwyg"></td>
+	<td class="data-type__parameter-type">
+    <span class="parameter-type">
+      
+
+string</span>
+<span class="badge">Optional</span></td>
+	<td class="data-type__parameter-attributes-examples">
+
+
+
+</td>
+</tr>
+
+      
+
+
+<tr class="data-type__parameter">
+	<th class="data-type__parameter-type-label" scope="row">STREET</th>
+	<td class="wysiwyg"></td>
+	<td class="data-type__parameter-type">
+    <span class="parameter-type">
+      
+
+string</span>
+<span class="badge">Optional</span></td>
+	<td class="data-type__parameter-attributes-examples">
+
+
+
+</td>
+</tr>
+
+      
+
+
+<tr class="data-type__parameter">
+	<th class="data-type__parameter-type-label" scope="row">CITY</th>
+	<td class="wysiwyg"></td>
+	<td class="data-type__parameter-type">
+    <span class="parameter-type">
+      
+
+string</span>
+<span class="badge">Optional</span></td>
+	<td class="data-type__parameter-attributes-examples">
+
+
+
+</td>
+</tr>
+
+      
+
+
+<tr class="data-type__parameter">
+	<th class="data-type__parameter-type-label" scope="row">DEPARTMENT</th>
+	<td class="wysiwyg"></td>
+	<td class="data-type__parameter-type">
+    <span class="parameter-type">
+      
+
+string</span>
+<span class="badge">Optional</span></td>
+	<td class="data-type__parameter-attributes-examples">
+
+
+
+</td>
+</tr>
+
+      
+
+
+<tr class="data-type__parameter">
+	<th class="data-type__parameter-type-label" scope="row">REGION</th>
+	<td class="wysiwyg"></td>
+	<td class="data-type__parameter-type">
+    <span class="parameter-type">
+      
+
+string</span>
+<span class="badge">Optional</span></td>
+	<td class="data-type__parameter-attributes-examples">
+
+
+
+</td>
+</tr>
+
+      
+
+
+<tr class="data-type__parameter">
+	<th class="data-type__parameter-type-label" scope="row">COUNTRY</th>
+	<td class="wysiwyg"></td>
+	<td class="data-type__parameter-type">
+    <span class="parameter-type">
+      
+
+string</span>
+<span class="badge">Optional</span></td>
+	<td class="data-type__parameter-attributes-examples">
+
+
+
+</td>
+</tr>
+
+      
+
+
+<tr class="data-type__parameter">
+	<th class="data-type__parameter-type-label" scope="row">POSTAL_CODE</th>
+	<td class="wysiwyg"></td>
+	<td class="data-type__parameter-type">
+    <span class="parameter-type">
+      
+
+integer</span>
+<span class="badge">Optional</span></td>
+	<td class="data-type__parameter-attributes-examples">
+
+
+
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<div class="definition-example">
+				<div id="type_customer_7866b8659aecb7f4c28163151175af68" class="definition-example__title"><span>Customer</span></div>
+				<div role="region" tabindex="0" class="code-container" aria-labelledby="type_customer_7866b8659aecb7f4c28163151175af68">
+
+
+	
+		<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl"><span class="nt">&#34;ID&#34;</span><span class="p">:</span> <span class="s2">&#34;000001&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl"><span class="nt">&#34;NAME&#34;</span><span class="p">:</span> <span class="s2">&#34;Sofiene&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl"><span class="nt">&#34;LAST NAME&#34;</span><span class="p">:</span> <span class="s2">&#34;Khayati&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl"><span class="nt">&#34;MAIL&#34;</span><span class="p">:</span> <span class="s2">&#34;Sofiene.Khayati@agilos.com&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl"><span class="nt">&#34;PHONE&#34;</span><span class="p">:</span> <span class="s2">&#34;0465784646&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl"><span class="nt">&#34;STREET_NUMBER&#34;</span><span class="p">:</span> <span class="s2">&#34;1&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl"><span class="nt">&#34;CITY&#34;</span><span class="p">:</span> <span class="s2">&#34;Ixelles&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl"><span class="nt">&#34;DEPARTMENT&#34;</span><span class="p">:</span> <span class="s2">&#34;Brussels&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl"><span class="nt">&#34;REGION&#34;</span><span class="p">:</span> <span class="s2">&#34;Brussels&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl"><span class="nt">&#34;COUNTRY&#34;</span><span class="p">:</span> <span class="s2">&#34;Belgium&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl"><span class="nt">&#34;POSTAL_CODE&#34;</span><span class="p">:</span> <span class="s2">&#34;1050&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span></span></span></code></pre></div></div>
+			</div>
+</div>
+	</div>
+</section>
+
+
+<section id="type_customers_anchor" class="datatype" aria-labelledby="type_customers">
+	<div class="data-type__content">
+		<div class="data-type__header">
+			<h3 id="type_customers">Customers</h3>
+		</div>
+		<div class="definition__data-type definition">
+			<div id="tooltip_type_customers" class="js-tooltip-content" >
+
+	
+
+
+
+<div class="data-type__object-title">Object</div>
+
+
+<table>
+  <thead class="sr-only">
+    <tr>
+      <th scope="col">Name</th>
+      <th scope="col">Description</th>
+      <th scope="col">Type</th>
+      <th scope="col">Attributes and examples</th>
+    </tr>
+  </thead>
+  <tbody>
+  
+      
+
+<tr class="data-type__parameter">
+  <th class="data-type__parameter-type-label" scope="row" aria-describedby="4b111faff5bc26b020880d92d4e3890d">Customers</th>
+  <td></td>
+  <td class="data-type__parameter-type">
+    <span class="parameter-type">
+      
+
+array of Object
+</span>
+    <span class="badge">Optional</span></td>
+  <td class="data-type__parameter-attributes-examples">
+
+
+<table id="4b111faff5bc26b020880d92d4e3890d">
+  <caption class="data-type-title sr-only">Datatype details</caption>
+  <thead class="sr-only">
+    <tr>
+      <th scope="col">Type</th>
+      <th scope="col">Description</th>
+      <th scope="col">Attributes and examples</th>
+    </tr>
+  </thead>
+  <tbody>
+<tr class="data-type__parameter array-parameter--description">
+      <th scope="row">array</th>
+      <td></td>
+      <td class="data-type__parameter-attributes-examples">
+  
+
+
+
+</td>
+    </tr>
+<tr class="data-type__parameter array-parameter--description">
+      <th scope="row" aria-describedby="b76d20731a1db34a1cf04fa5abc451c4">Object</th>
+      <td></td>
+      <td class="data-type__parameter-attributes-examples">
+
+
+
+</td>
+    </tr>
+    
+    <tr class="data-type__parameter--subtype">
+      <td colspan="3">
+
+<table id="b76d20731a1db34a1cf04fa5abc451c4">
+  <thead class="sr-only">
+    <tr>
+      <th scope="col">Name</th>
+      <th scope="col">Description</th>
+      <th scope="col">Type</th>
+      <th scope="col">Attributes and examples</th>
+    </tr>
+  </thead>
+  <tbody>
+  
+      
+
+
+<tr class="data-type__parameter">
+	<th class="data-type__parameter-type-label" scope="row">ID</th>
+	<td class="wysiwyg"></td>
+	<td class="data-type__parameter-type">
+    <span class="parameter-type">
+      
+
+integer</span>
+<span class="badge badge--warn">Required</span></td>
+	<td class="data-type__parameter-attributes-examples">
+
+
+
+</td>
+</tr>
+
+      
+
+
+<tr class="data-type__parameter">
+	<th class="data-type__parameter-type-label" scope="row">NAME</th>
+	<td class="wysiwyg"></td>
+	<td class="data-type__parameter-type">
+    <span class="parameter-type">
+      
+
+string</span>
+<span class="badge badge--warn">Required</span></td>
+	<td class="data-type__parameter-attributes-examples">
+
+
+
+</td>
+</tr>
+
+      
+
+
+<tr class="data-type__parameter">
+	<th class="data-type__parameter-type-label" scope="row">LAST_NAME</th>
+	<td class="wysiwyg"></td>
+	<td class="data-type__parameter-type">
+    <span class="parameter-type">
+      
+
+string</span>
+<span class="badge badge--warn">Required</span></td>
+	<td class="data-type__parameter-attributes-examples">
+
+
+
+</td>
+</tr>
+
+      
+
+
+<tr class="data-type__parameter">
+	<th class="data-type__parameter-type-label" scope="row">MAIL</th>
+	<td class="wysiwyg"></td>
+	<td class="data-type__parameter-type">
+    <span class="parameter-type">
+      
+
+string</span>
+<span class="badge">Optional</span></td>
+	<td class="data-type__parameter-attributes-examples">
+
+
+
+</td>
+</tr>
+
+      
+
+
+<tr class="data-type__parameter">
+	<th class="data-type__parameter-type-label" scope="row">PHONE</th>
+	<td class="wysiwyg"></td>
+	<td class="data-type__parameter-type">
+    <span class="parameter-type">
+      
+
+string</span>
+<span class="badge">Optional</span></td>
+	<td class="data-type__parameter-attributes-examples">
+
+
+
+</td>
+</tr>
+
+      
+
+
+<tr class="data-type__parameter">
+	<th class="data-type__parameter-type-label" scope="row">STREET_NUMBER</th>
+	<td class="wysiwyg"></td>
+	<td class="data-type__parameter-type">
+    <span class="parameter-type">
+      
+
+string</span>
+<span class="badge">Optional</span></td>
+	<td class="data-type__parameter-attributes-examples">
+
+
+
+</td>
+</tr>
+
+      
+
+
+<tr class="data-type__parameter">
+	<th class="data-type__parameter-type-label" scope="row">CITY</th>
+	<td class="wysiwyg"></td>
+	<td class="data-type__parameter-type">
+    <span class="parameter-type">
+      
+
+string</span>
+<span class="badge">Optional</span></td>
+	<td class="data-type__parameter-attributes-examples">
+
+
+
+</td>
+</tr>
+
+      
+
+
+<tr class="data-type__parameter">
+	<th class="data-type__parameter-type-label" scope="row">DEPARTMENT</th>
+	<td class="wysiwyg"></td>
+	<td class="data-type__parameter-type">
+    <span class="parameter-type">
+      
+
+string</span>
+<span class="badge">Optional</span></td>
+	<td class="data-type__parameter-attributes-examples">
+
+
+
+</td>
+</tr>
+
+      
+
+
+<tr class="data-type__parameter">
+	<th class="data-type__parameter-type-label" scope="row">REGION</th>
+	<td class="wysiwyg"></td>
+	<td class="data-type__parameter-type">
+    <span class="parameter-type">
+      
+
+string</span>
+<span class="badge">Optional</span></td>
+	<td class="data-type__parameter-attributes-examples">
+
+
+
+</td>
+</tr>
+
+      
+
+
+<tr class="data-type__parameter">
+	<th class="data-type__parameter-type-label" scope="row">COUNTRY</th>
+	<td class="wysiwyg"></td>
+	<td class="data-type__parameter-type">
+    <span class="parameter-type">
+      
+
+string</span>
+<span class="badge">Optional</span></td>
+	<td class="data-type__parameter-attributes-examples">
+
+
+
+</td>
+</tr>
+
+      
+
+
+<tr class="data-type__parameter">
+	<th class="data-type__parameter-type-label" scope="row">POSTAL_CODE</th>
+	<td class="wysiwyg"></td>
+	<td class="data-type__parameter-type">
+    <span class="parameter-type">
+      
+
+integer</span>
+<span class="badge">Optional</span></td>
+	<td class="data-type__parameter-attributes-examples">
+
+
+
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+    </tr>
+    </tbody>
+</table>
+
+  </td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<div class="definition-example">
+				<div id="type_customers_666c184b135c871aa167258b98e76ff5" class="definition-example__title"><span>Customers</span></div>
+				<div role="region" tabindex="0" class="code-container" aria-labelledby="type_customers_666c184b135c871aa167258b98e76ff5">
+
+
+	
+		<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl"><span class="nt">&#34;Customers&#34;</span><span class="p">:[</span>
+</span></span><span class="line"><span class="cl">    <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;ID&#34;</span><span class="p">:</span> <span class="s2">&#34;1234&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;NAME&#34;</span><span class="p">:</span> <span class="s2">&#34;Alice&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;LAST_NAME&#34;</span><span class="p">:</span> <span class="s2">&#34;Khayati&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;MAIL&#34;</span><span class="p">:</span> <span class="s2">&#34;Sofiene.Khayati@agilos.com&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;PHONE&#34;</span><span class="p">:</span> <span class="s2">&#34;0465784646&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;STREET_NUMBER&#34;</span><span class="p">:</span> <span class="s2">&#34;11&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;CITY&#34;</span><span class="p">:</span> <span class="s2">&#34;Brussels&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;DEPARTMENT&#34;</span><span class="p">:</span> <span class="s2">&#34;Brussels&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;REGION&#34;</span><span class="p">:</span> <span class="s2">&#34;Brussels&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;COUNTRY&#34;</span><span class="p">:</span> <span class="s2">&#34;Belgium&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;POSTAL_CODE&#34;</span><span class="p">:</span> <span class="s2">&#34;1000&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">},</span>
+</span></span><span class="line"><span class="cl">    <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;ID&#34;</span><span class="p">:</span> <span class="s2">&#34;1920&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;NAME&#34;</span><span class="p">:</span> <span class="s2">&#34;Sofiene&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;LAST_NAME&#34;</span><span class="p">:</span> <span class="s2">&#34;Khayati&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;MAIL&#34;</span><span class="p">:</span> <span class="s2">&#34;Sofiene.Khayati@agilos.com&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;PHONE&#34;</span><span class="p">:</span> <span class="s2">&#34;0465784646&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;STREET_NUMBER&#34;</span><span class="p">:</span> <span class="s2">&#34;12&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;CITY&#34;</span><span class="p">:</span> <span class="s2">&#34;Ixelles&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;DEPARTMENT&#34;</span><span class="p">:</span> <span class="s2">&#34;Brussels&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;REGION&#34;</span><span class="p">:</span> <span class="s2">&#34;Brussels&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;COUNTRY&#34;</span><span class="p">:</span> <span class="s2">&#34;Belgium&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;POSTAL_CODE&#34;</span><span class="p">:</span> <span class="s2">&#34;1050&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">},</span>
+</span></span><span class="line"><span class="cl">    <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;ID&#34;</span><span class="p">:</span> <span class="s2">&#34;1920&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;NAME&#34;</span><span class="p">:</span> <span class="s2">&#34;Lina&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;LAST_NAME&#34;</span><span class="p">:</span> <span class="s2">&#34;Khayati&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;MAIL&#34;</span><span class="p">:</span> <span class="s2">&#34;Sofiene.Khayati@agilos.com&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;PHONE&#34;</span><span class="p">:</span> <span class="s2">&#34;0465784646&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;STREET_NUMBER&#34;</span><span class="p">:</span> <span class="s2">&#34;12&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;CITY&#34;</span><span class="p">:</span> <span class="s2">&#34;Ixelles&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;DEPARTMENT&#34;</span><span class="p">:</span> <span class="s2">&#34;Brussels&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;REGION&#34;</span><span class="p">:</span> <span class="s2">&#34;Brussels&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;COUNTRY&#34;</span><span class="p">:</span> <span class="s2">&#34;Belgium&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;POSTAL_CODE&#34;</span><span class="p">:</span> <span class="s2">&#34;1050&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">},</span>
+</span></span><span class="line"><span class="cl">    <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;ID&#34;</span><span class="p">:</span> <span class="s2">&#34;1920&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;NAME&#34;</span><span class="p">:</span> <span class="s2">&#34;Henri&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;LAST_NAME&#34;</span><span class="p">:</span> <span class="s2">&#34;Van Den Berghe&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;MAIL&#34;</span><span class="p">:</span> <span class="s2">&#34;Sofiene.Khayati@agilos.com&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;PHONE&#34;</span><span class="p">:</span> <span class="s2">&#34;0465784646&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;STREET_NUMBER&#34;</span><span class="p">:</span> <span class="s2">&#34;1&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;CITY&#34;</span><span class="p">:</span> <span class="s2">&#34;Saint Gilles&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;DEPARTMENT&#34;</span><span class="p">:</span> <span class="s2">&#34;Brussels&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;REGION&#34;</span><span class="p">:</span> <span class="s2">&#34;Brussels&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;COUNTRY&#34;</span><span class="p">:</span> <span class="s2">&#34;Belgium&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;POSTAL_CODE&#34;</span><span class="p">:</span> <span class="s2">&#34;1060&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">]</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span></span></span></code></pre></div></div>
+			</div>
+</div>
+	</div>
+</section>
+
+
+<section id="operation_list-of-customer_anchor" class="operation" aria-labelledby="operation_list-of-customer">
+	<div class="operation__content">
+        <h3 id="operation_list-of-customer">List of customer</h3>
+        <span class="operation--get operation--default">GET</span> <span class="operation__url">/Customers</span>
+	<div class="definition__content definition">
+			<h4>Response</h4>
+		
+		
+				
+					
+
+<div class="response">
+	<details class="response__detail" open="">
+		<summary class="response__type"><span><span class="badge badge--2xx">200</span>Status 200</span><svg viewBox="0 0 16 16" aria-hidden="true" class="response__type--icon"><path d="M8 13.6l-8-8L2.6 3 8 8.4 13.4 3 16 5.6z"></path></svg></summary>
+		<div class="response-description wysiwyg">List found</div>
+
+
+
+<div class="response__content">
+    <span class="response__body">Body</span>
+    <div class="dropdown">
+    <span class="response__mimetype">application/json</span></div>
+</div>
+
+    <div id="body_92b5885b5041cb49e4b7b7833086ecfcapplicationjson" class="body__content" >
+    <div class="body__content">
+
+
+
+
+<table>
+  <caption class="data-type-title sr-only"> details</caption>
+  <thead class="sr-only">
+    <tr>
+      <th scope="col">Name</th>
+      <th scope="col">Description</th>
+      <th scope="col">Type</th>
+      <th scope="col">Attributes and examples</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="response-body__parameter response-body__array-type-details">
+      <th class="response-body__parameter-type-label" scope="row" aria-describedby="c60c3b40ac0be2cc02ef33fc4f43d4af">
+
+
+array of 
+
+string
+
+      </th>
+      <td class="response-body__parameter-attributes-examples">
+
+
+<table id="c60c3b40ac0be2cc02ef33fc4f43d4af">
+  <caption class="response-body-title sr-only">Datatype details</caption>
+  <thead class="sr-only">
+    <tr>
+      <th scope="col">Type</th>
+      <th scope="col">Description</th>
+      <th scope="col">Attributes and examples</th>
+    </tr>
+  </thead>
+  <tbody>
+<tr class="response-body__parameter response-body__array-first-type">
+      <th scope="row">array</th>
+      <td></td>
+      <td class="response-body__parameter-attributes-examples">
+  
+    
+
+</td>
+    </tr>
+<tr class="response-body__parameter array-parameter--description">
+      <th scope="row">
+      string</th>
+      <td></td>
+      <td class="response-body__parameter-attributes-examples">
+
+
+
+</td>
+    </tr>
+  </tbody>
+</table>
+
+      </td>
+      <td colspan="2"></td>
+    </tr>
+  </tbody>
+</table>
+</div>
+        <div class="definition-example">
+        <div id="bodySample_92b5885b5041cb49e4b7b7833086ecfcapplicationjson" class="definition-example__title">
+            <span>Status 200</span><span class="definition-example__mimetype">
+                    application/json</span>
+            </div>
+        <div role="region" tabindex="0" class="code-container" aria-labelledby="bodySample_92b5885b5041cb49e4b7b7833086ecfcapplicationjson">
+
+
+	
+		<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl"><span class="nt">&#34;Customers&#34;</span><span class="p">:[</span>
+</span></span><span class="line"><span class="cl">    <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;ID&#34;</span><span class="p">:</span> <span class="s2">&#34;1234&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;NAME&#34;</span><span class="p">:</span> <span class="s2">&#34;Alice&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;LAST_NAME&#34;</span><span class="p">:</span> <span class="s2">&#34;Khayati&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;MAIL&#34;</span><span class="p">:</span> <span class="s2">&#34;Sofiene.Khayati@agilos.com&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;PHONE&#34;</span><span class="p">:</span> <span class="s2">&#34;0465784646&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;STREET_NUMBER&#34;</span><span class="p">:</span> <span class="s2">&#34;11&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;CITY&#34;</span><span class="p">:</span> <span class="s2">&#34;Brussels&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;DEPARTMENT&#34;</span><span class="p">:</span> <span class="s2">&#34;Brussels&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;REGION&#34;</span><span class="p">:</span> <span class="s2">&#34;Brussels&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;COUNTRY&#34;</span><span class="p">:</span> <span class="s2">&#34;Belgium&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;POSTAL_CODE&#34;</span><span class="p">:</span> <span class="s2">&#34;1000&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">},</span>
+</span></span><span class="line"><span class="cl">    <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;ID&#34;</span><span class="p">:</span> <span class="s2">&#34;1920&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;NAME&#34;</span><span class="p">:</span> <span class="s2">&#34;Sofiene&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;LAST_NAME&#34;</span><span class="p">:</span> <span class="s2">&#34;Khayati&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;MAIL&#34;</span><span class="p">:</span> <span class="s2">&#34;Sofiene.Khayati@agilos.com&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;PHONE&#34;</span><span class="p">:</span> <span class="s2">&#34;0465784646&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;STREET_NUMBER&#34;</span><span class="p">:</span> <span class="s2">&#34;12&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;CITY&#34;</span><span class="p">:</span> <span class="s2">&#34;Ixelles&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;DEPARTMENT&#34;</span><span class="p">:</span> <span class="s2">&#34;Brussels&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;REGION&#34;</span><span class="p">:</span> <span class="s2">&#34;Brussels&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;COUNTRY&#34;</span><span class="p">:</span> <span class="s2">&#34;Belgium&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;POSTAL_CODE&#34;</span><span class="p">:</span> <span class="s2">&#34;1050&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">]</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span></span></span></code></pre></div></div>
+    </div>
+        </div>
+    </details>
+</div>
+
+				
+
+<div class="response">
+	<details class="response__detail" >
+		<summary class="response__type"><span><span class="badge badge--4xx">404</span>Status 404</span><svg viewBox="0 0 16 16" aria-hidden="true" class="response__type--icon"><path d="M8 13.6l-8-8L2.6 3 8 8.4 13.4 3 16 5.6z"></path></svg></summary>
+		<div class="response-description wysiwyg">Not Found</div>
+
+
+
+<div class="response__content">
+    <span class="response__body">Body</span>
+    <div class="dropdown">
+    <span class="response__mimetype">application/json</span></div>
+</div>
+
+    <div id="body_30478c4649539c8fb725beb81c850bbeapplicationjson" class="body__content" >
+    <div>Return all customer</div><div class="body__content">
+
+
+
+
+<div class="data-type__object-title">Object</div>
+
+
+</div>
+        <div class="definition-example">
+        <div id="bodySample_30478c4649539c8fb725beb81c850bbeapplicationjson" class="definition-example__title">
+            <span>Status 404</span><span class="definition-example__mimetype">
+                    application/json</span>
+            </div>
+        <div role="region" tabindex="0" class="code-container" aria-labelledby="bodySample_30478c4649539c8fb725beb81c850bbeapplicationjson">
+
+
+	
+		<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl"><span class="nt">&#34;Customers&#34;</span><span class="p">:[</span>
+</span></span><span class="line"><span class="cl">    <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;ID&#34;</span><span class="p">:</span> <span class="s2">&#34;1234&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;NAME&#34;</span><span class="p">:</span> <span class="s2">&#34;Alice&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;LAST_NAME&#34;</span><span class="p">:</span> <span class="s2">&#34;Khayati&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;MAIL&#34;</span><span class="p">:</span> <span class="s2">&#34;Sofiene.Khayati@agilos.com&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;PHONE&#34;</span><span class="p">:</span> <span class="s2">&#34;0465784646&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;STREET_NUMBER&#34;</span><span class="p">:</span> <span class="s2">&#34;11&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;CITY&#34;</span><span class="p">:</span> <span class="s2">&#34;Brussels&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;DEPARTMENT&#34;</span><span class="p">:</span> <span class="s2">&#34;Brussels&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;REGION&#34;</span><span class="p">:</span> <span class="s2">&#34;Brussels&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;COUNTRY&#34;</span><span class="p">:</span> <span class="s2">&#34;Belgium&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;POSTAL_CODE&#34;</span><span class="p">:</span> <span class="s2">&#34;1000&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">},</span>
+</span></span><span class="line"><span class="cl">    <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;ID&#34;</span><span class="p">:</span> <span class="s2">&#34;1920&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;NAME&#34;</span><span class="p">:</span> <span class="s2">&#34;Sofiene&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;LAST_NAME&#34;</span><span class="p">:</span> <span class="s2">&#34;Khayati&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;MAIL&#34;</span><span class="p">:</span> <span class="s2">&#34;Sofiene.Khayati@agilos.com&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;PHONE&#34;</span><span class="p">:</span> <span class="s2">&#34;0465784646&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;STREET_NUMBER&#34;</span><span class="p">:</span> <span class="s2">&#34;12&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;CITY&#34;</span><span class="p">:</span> <span class="s2">&#34;Ixelles&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;DEPARTMENT&#34;</span><span class="p">:</span> <span class="s2">&#34;Brussels&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;REGION&#34;</span><span class="p">:</span> <span class="s2">&#34;Brussels&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;COUNTRY&#34;</span><span class="p">:</span> <span class="s2">&#34;Belgium&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;POSTAL_CODE&#34;</span><span class="p">:</span> <span class="s2">&#34;1050&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">},</span>
+</span></span><span class="line"><span class="cl">    <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;ID&#34;</span><span class="p">:</span> <span class="s2">&#34;1920&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;NAME&#34;</span><span class="p">:</span> <span class="s2">&#34;Lina&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;LAST_NAME&#34;</span><span class="p">:</span> <span class="s2">&#34;Khayati&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;MAIL&#34;</span><span class="p">:</span> <span class="s2">&#34;Sofiene.Khayati@agilos.com&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;PHONE&#34;</span><span class="p">:</span> <span class="s2">&#34;0465784646&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;STREET_NUMBER&#34;</span><span class="p">:</span> <span class="s2">&#34;12&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;CITY&#34;</span><span class="p">:</span> <span class="s2">&#34;Ixelles&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;DEPARTMENT&#34;</span><span class="p">:</span> <span class="s2">&#34;Brussels&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;REGION&#34;</span><span class="p">:</span> <span class="s2">&#34;Brussels&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;COUNTRY&#34;</span><span class="p">:</span> <span class="s2">&#34;Belgium&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;POSTAL_CODE&#34;</span><span class="p">:</span> <span class="s2">&#34;1050&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">},</span>
+</span></span><span class="line"><span class="cl">    <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;ID&#34;</span><span class="p">:</span> <span class="s2">&#34;1920&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;NAME&#34;</span><span class="p">:</span> <span class="s2">&#34;Henri&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;LAST_NAME&#34;</span><span class="p">:</span> <span class="s2">&#34;Van Den Berghe&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;MAIL&#34;</span><span class="p">:</span> <span class="s2">&#34;Sofiene.Khayati@agilos.com&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;PHONE&#34;</span><span class="p">:</span> <span class="s2">&#34;0465784646&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;STREET_NUMBER&#34;</span><span class="p">:</span> <span class="s2">&#34;1&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;CITY&#34;</span><span class="p">:</span> <span class="s2">&#34;Saint Gilles&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;DEPARTMENT&#34;</span><span class="p">:</span> <span class="s2">&#34;Brussels&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;REGION&#34;</span><span class="p">:</span> <span class="s2">&#34;Brussels&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;COUNTRY&#34;</span><span class="p">:</span> <span class="s2">&#34;Belgium&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;POSTAL_CODE&#34;</span><span class="p">:</span> <span class="s2">&#34;1060&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">]</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span></span></span></code></pre></div></div>
+    </div>
+        </div>
+    </details>
+</div>
+</div>
+	</div>
+	<div class="operation__content-info operation__content-info--odd">
+		
+<div class="try-in-tester js-try-in-tester">
+  <button class="try-in-tester__action js-try-in-tester--action btn btn--primary js-operation-try-in-tester "
+          data-operation-id="7a49026f-0b2a-4d0e-ba42-ea41d3578781" type="button">
+    Try in API Tester
+    </button>
+  </div>
+
+</div>
+</section>
+
+
+<section id="operation_get-one-customer_anchor" class="operation" aria-labelledby="operation_get-one-customer">
+	<div class="operation__content">
+        <h3 id="operation_get-one-customer">Get one customer</h3>
+        <span class="operation--get operation--default">GET</span> <span class="operation__url">/Customers/{ID}</span>
+	<div class="definition__content definition">
+			<div>
+				<h4>Request</h4>
+		
+
+<table>
+  <caption class="request__path-variables">Path variables</caption><thead class="sr-only">
+    <tr>
+      <th scope="col">Name</th>
+      <th scope="col">Description</th>
+      <th scope="col">Type</th>
+      <th scope="col">Attributes and examples</th>
+    </tr>
+  </thead>
+  <tbody>
+  
+      
+
+
+<tr class="request__parameter">
+	<th class="request__parameter-type-label" scope="row">ID</th>
+	<td class="wysiwyg"></td>
+	<td class="request__parameter-type">
+    <span class="parameter-type">
+      
+
+string</span>
+<span class="badge badge--warn">Required</span></td>
+	<td class="request__parameter-attributes-examples">
+
+
+
+</td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+</div>
+		
+
+</div>
+	<div class="definition__content definition">
+			<h4>Response</h4>
+		
+		
+				
+					
+
+<div class="response">
+	<details class="response__detail" open="">
+		<summary class="response__type"><span><span class="badge badge--2xx">200</span>Status 200</span><svg viewBox="0 0 16 16" aria-hidden="true" class="response__type--icon"><path d="M8 13.6l-8-8L2.6 3 8 8.4 13.4 3 16 5.6z"></path></svg></summary>
+		<div class="response-description wysiwyg">Customer retreived</div>
+
+
+
+<div class="response__content">
+    <span class="response__body">Body</span>
+    <div class="dropdown">
+    <span class="response__mimetype">application/json</span></div>
+</div>
+
+    <div id="body_c591b86bb573c378e44b89c820bef504applicationjson" class="body__content" >
+    <div class="body__content">
+
+
+
+
+<div class="data-type__object-title">Object</div>
+
+
+</div>
+        <div class="definition-example">
+        <div id="bodySample_c591b86bb573c378e44b89c820bef504applicationjson" class="definition-example__title">
+            <span>Status 200</span><span class="definition-example__mimetype">
+                    application/json</span>
+            </div>
+        <div role="region" tabindex="0" class="code-container" aria-labelledby="bodySample_c591b86bb573c378e44b89c820bef504applicationjson">
+
+
+	
+		<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl"><span class="p">{</span><span class="nt">&#34;ID&#34;</span><span class="p">:</span> <span class="s2">&#34;1234&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl"><span class="nt">&#34;NAME&#34;</span><span class="p">:</span> <span class="s2">&#34;Alice&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl"><span class="nt">&#34;LAST NAME&#34;</span><span class="p">:</span> <span class="s2">&#34;Khayati&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl"><span class="nt">&#34;MAIL&#34;</span><span class="p">:</span> <span class="s2">&#34;Sofiene.Khayati@agilos.com&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl"><span class="nt">&#34;PHONE&#34;</span><span class="p">:</span> <span class="s2">&#34;0465784646&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl"><span class="nt">&#34;STREET_NUMBER&#34;</span><span class="p">:</span> <span class="s2">&#34;11&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl"><span class="nt">&#34;CITY&#34;</span><span class="p">:</span> <span class="s2">&#34;Brussels&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl"><span class="nt">&#34;DEPARTMENT&#34;</span><span class="p">:</span> <span class="s2">&#34;Brussels&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl"><span class="nt">&#34;REGION&#34;</span><span class="p">:</span> <span class="s2">&#34;Brussels&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl"><span class="nt">&#34;COUNTRY&#34;</span><span class="p">:</span> <span class="s2">&#34;Belgium&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl"><span class="nt">&#34;POSTAL_CODE&#34;</span><span class="p">:</span> <span class="s2">&#34;1000&#34;</span><span class="p">}</span></span></span></code></pre></div></div>
+    </div>
+        </div>
+    </details>
+</div>
+
+				
+
+<div class="response">
+	<details class="response__detail" >
+		<summary class="response__type"><span><span class="badge badge--4xx">404</span>Status 404</span><svg viewBox="0 0 16 16" aria-hidden="true" class="response__type--icon"><path d="M8 13.6l-8-8L2.6 3 8 8.4 13.4 3 16 5.6z"></path></svg></summary>
+		<div class="response-description wysiwyg">Customer not found</div>
+
+
+
+</details>
+</div>
+</div>
+	</div>
+	<div class="operation__content-info operation__content-info--odd">
+		
+<div class="try-in-tester js-try-in-tester">
+  <button class="try-in-tester__action js-try-in-tester--action btn btn--primary js-operation-try-in-tester "
+          data-operation-id="a33cbd28-b630-4155-ba74-1c47648eb8c9" type="button">
+    Try in API Tester
+    </button>
+  </div>
+
+</div>
+</section>
+<span class="back-to-top-wrapper"><a class="back-to-top" href="#"><span class="sr-only">back to top</span>↑</a></span></main>
+    <footer class="footer">
+
+
+<span>API Portal</span>
+</footer>
+
+		
+
+<div tabindex="-1" role="dialog" aria-labelledby="modal-label" hidden id="try-in-tester-version-modal" class="modal__overlay js-close-modal">
+  <div role="document" class="modal__wrapper scrollable">
+    <h2 id="modal-label" class="modal__title">Talend API Tester upgrade is required</h2>
+    <div class="modal__content">
+      <p>Your Talend API Tester extension is in Version <strong id="js-current-version-tester"></strong>, but the minimum required version for this feature is <strong id="js-minimum-version-tester"></strong>.</p>
+      <a target="_blank" rel="noopener" href="https://help.talend.com/access/sources/content/topic?pageid=tester_update_extension&EnrichVersion=Cloud&afs:lang=en">
+        Learn more about API Tester<svg role="img" aria-label='Open in a new window' class="open-link-new-window-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+          <path d="M16 0v6h-2V3l-8.489 8.773-1.253-1.253L13 2h-3V0zm-4 10v4H2V4h4V2H0v14h14v-6z"></path>
+        </svg>
+      </a>
+    </div>
+    <button type="button" aria-label='Close modal' class="js-close-modal modal__close btn--naked">&times;</button>
+  </div>
+</div>
+<script type="module" src="../../../js/apis.min.0af8c111f772d278d2fbde38fa252ca44e9268c68955afb4aa5b85633382efb3.js"></script>
+		
+		<script type="module" src="../../../js/tryInTester.min.3429317c2b5f67d690fc7dc79759ee71803fb089dc3628fb584c21f3f2a782fd.js"></script>
+	</body>
+</html>
