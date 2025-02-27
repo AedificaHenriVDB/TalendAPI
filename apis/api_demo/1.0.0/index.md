@@ -320,7 +320,7 @@ api-tryin: |-
         "projectId" : "734b112a-2a3a-46fc-89ba-8020878eed42"
       },
       "variables" : {
-        "528d0677-bad2-454a-ad3e-4d5c2c831bcb" : {
+        "3b307669-ae31-4585-9286-9a97a0dcc79a" : {
           "name" : "BaseUrl",
           "value" : "http://127.0.0.0:8090",
           "enabled" : true,
@@ -333,7 +333,7 @@ api-tryin: |-
         "projectId" : "734b112a-2a3a-46fc-89ba-8020878eed42"
       },
       "variables" : {
-        "0ac594f9-a23b-49df-a699-2f6e1505f0dc" : {
+        "1ac6cd68-1416-4e1f-9820-82939f6a2615" : {
           "name" : "BaseUrl",
           "value" : "http://www.agilos.com",
           "enabled" : true,
