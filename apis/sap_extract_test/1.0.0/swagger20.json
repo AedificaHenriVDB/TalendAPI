@@ -1,0 +1,157 @@
+{
+  "swagger" : "2.0",
+  "info" : {
+    "description" : "No description",
+    "version" : "1.0.0",
+    "title" : "SAP_EXTRACT_TEST",
+    "contact" : { }
+  },
+  "host" : "2ig912ru1eka29u.eu.api-mocks.com",
+  "schemes" : [ "https" ],
+  "paths" : {
+    "/Customer" : {
+      "post" : {
+        "summary" : "Add Customer",
+        "consumes" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "body",
+          "in" : "body",
+          "required" : true,
+          "schema" : {
+            "$ref" : "#/definitions/SAP_Z_POH_FILTRED"
+          },
+          "x-examples" : {
+            "application/json" : "{\"ID\": \"1920\",\n\"NAME\": \"Sofiene\",\n\"LAST NAME\": \"Khayati\",\n\"MAIL\": \"Sofiene.Khayati@agilos.com\",\n\"PHONE\": \"0465784646\",\n\"STREET_NUMBER\": \"12\",\n\"CITY\": \"Ixelles\",\n\"DEPARTMENT\": \"Brussels\",\n\"REGION\": \"Brussels\",\n\"COUNTRY\": \"Belgium\",\n\"POSTAL_CODE\": \"1050\"}"
+          }
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "Customer Added"
+          }
+        }
+      }
+    },
+    "/Z_POH" : {
+      "get" : {
+        "summary" : "SAP_Z_POH",
+        "description" : "Z_POH SAP DATA",
+        "produces" : [ "application/json" ],
+        "parameters" : [ ],
+        "responses" : {
+          "200" : {
+            "description" : "Result OK",
+            "schema" : {
+              "$ref" : "#/definitions/SAP_Z_POH"
+            },
+            "examples" : {
+              "application/json" : "{\n\"SAP_Z_POH\":[\n    {\n        \"Client\": \"100\",\n        \"Purchase Order\": \"4500004361\",\n        \"Purchasing Doc. Type\": \"ZB\",\n        \"Purchase Order Date\": \"2025-02-01\",\n        \"Total val. upon release\": \"7652452\"\n    },\n    {\n        \"Client\": \"100\",\n        \"Purchase Order\": \"4500004361\",\n        \"Purchasing Doc. Type\": \"ZB\",\n        \"Purchase Order Date\": \"2025-02-27\",\n        \"Total val. upon release\": \"7652452\"\n    }\n]\n}"
+            }
+          }
+        }
+      }
+    },
+    "/Z_POH/{Client}" : {
+      "get" : {
+        "summary" : "Filter_SAP_Z_POH",
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "dateFrom",
+          "in" : "query",
+          "required" : false,
+          "type" : "string",
+          "format" : "date",
+          "x-example" : "2025-02-01"
+        }, {
+          "name" : "dateTo",
+          "in" : "query",
+          "required" : false,
+          "type" : "string",
+          "format" : "date",
+          "x-example" : "2025-02-01"
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "It ok",
+            "schema" : {
+              "$ref" : "#/definitions/SAP_Z_POH_FILTRED"
+            },
+            "examples" : {
+              "application/json" : "{\n\"SAP_Z_POH\":[\n    {\n        \"Client\": \"100\",\n        \"Purchase Order\": \"4500004361\",\n        \"Purchasing Doc. Type\": \"ZB\",\n        \"Purchase Order Date\": \"2025-02-01\",\n        \"Total val. upon release\": \"7652452\"\n    },\n    {\n        \"Client\": \"100\",\n        \"Purchase Order\": \"4500004361\",\n        \"Purchasing Doc. Type\": \"ZB\",\n        \"Purchase Order Date\": \"2025-02-27\",\n        \"Total val. upon release\": \"7652452\"\n    }\n]\n}"
+            }
+          }
+        }
+      },
+      "parameters" : [ {
+        "name" : "Client",
+        "in" : "path",
+        "required" : true,
+        "type" : "string"
+      } ]
+    }
+  },
+  "definitions" : {
+    "SAP_Z_POH_FILTRED" : {
+      "type" : "object",
+      "properties" : {
+        "SAP_Z_POH" : {
+          "type" : "array",
+          "items" : {
+            "type" : "object",
+            "properties" : {
+              "Client" : {
+                "type" : "string"
+              },
+              "Purchase Order" : {
+                "type" : "string"
+              },
+              "Purchasing Doc. Type" : {
+                "type" : "string"
+              },
+              "Purchase Order Date" : {
+                "type" : "string",
+                "format" : "date"
+              },
+              "Total val. upon release" : {
+                "type" : "string"
+              }
+            }
+          }
+        }
+      },
+      "description" : "Filtred data from SAP_Z_POH",
+      "example" : "{\r\n\"SAP_Z_POH\":[\r\n    {\r\n        \"Client\": \"100\",\r\n        \"Purchase Order\": \"4500004361\",\r\n        \"Purchasing Doc. Type\": \"ZB\",\r\n        \"Purchase Order Date\": \"2025-02-01\",\r\n        \"Total val. upon release\": \"7652452\"\r\n    },\r\n    {\r\n        \"Client\": \"100\",\r\n        \"Purchase Order\": \"4500004361\",\r\n        \"Purchasing Doc. Type\": \"ZB\",\r\n        \"Purchase Order Date\": \"2025-02-27\",\r\n        \"Total val. upon release\": \"7652452\"\r\n    }\r\n]\r\n}"
+    },
+    "SAP_Z_POH" : {
+      "type" : "object",
+      "properties" : {
+        "SAP_Z_POH" : {
+          "type" : "array",
+          "items" : {
+            "required" : [ "Client", "Purchase Order" ],
+            "type" : "object",
+            "properties" : {
+              "Client" : {
+                "type" : "integer"
+              },
+              "Purchase Order" : {
+                "type" : "string"
+              },
+              "Purchasing Doc. Type" : {
+                "type" : "string"
+              },
+              "Purchase Order Date" : {
+                "type" : "string",
+                "format" : "date"
+              },
+              "Total val. upon release" : {
+                "type" : "number"
+              }
+            }
+          }
+        }
+      },
+      "description" : "SAP_Z_POH DATA",
+      "example" : "{\n\"SAP_Z_POH\":[\n    {\n        \"Client\": \"100\",\n        \"Purchase Order\": \"4500004361\",\n        \"Purchasing Doc. Type\": \"ZB\",\n        \"Purchase Order Date\": \"2025-02-01\",\n        \"Total val. upon release\": \"7652452\"\n    },\n    {\n        \"Client\": \"100\",\n        \"Purchase Order\": \"4500004361\",\n        \"Purchasing Doc. Type\": \"ZB\",\n        \"Purchase Order Date\": \"2025-02-27\",\n        \"Total val. upon release\": \"7652452\"\n    }\n]\n}"
+    }
+  }
+}
