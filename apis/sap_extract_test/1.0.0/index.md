@@ -7,6 +7,7 @@ api-definition:
     name: "SAP_EXTRACT_TEST"
     version: "1.0.0"
     description: "No description"
+    license: {}
     contact: {}
   contract:
     baseUrls:
@@ -97,15 +98,15 @@ api-definition:
             method: "GET"
             queryParameters:
             - name: "dateFrom"
-              type: "DATE"
+              type: "STRING"
               required: false
               examples:
-              - value: "2025-02-01"
+              - value: "20250201"
             - name: "dateTo"
-              type: "DATE"
+              type: "STRING"
               required: false
               examples:
-              - value: "2025-02-01"
+              - value: "20250201"
             responses:
               "5308a918-1624-4f9f-b0c4-2209d0c96617":
                 status: "200"
@@ -164,7 +165,25 @@ api-definition:
               type: "STRING"
               required: false
         examples:
-        - value: "{\r\n\"SAP_Z_POH\":[\r\n    {\r\n        \"Client\": \"100\",\r\n        \"Purchase Order\": \"4500004361\",\r\n        \"Purchasing Doc. Type\": \"ZB\",\r\n        \"Purchase Order Date\": \"2025-02-01\",\r\n        \"Total val. upon release\": \"7652452\"\r\n    },\r\n    {\r\n        \"Client\": \"100\",\r\n        \"Purchase Order\": \"4500004361\",\r\n        \"Purchasing Doc. Type\": \"ZB\",\r\n        \"Purchase Order Date\": \"2025-02-27\",\r\n        \"Total val. upon release\": \"7652452\"\r\n    }\r\n]\r\n}"
+        - value: |-
+            {
+            "SAP_Z_POH":[
+                {
+                    "Client": "100",
+                    "Purchase Order": "4500004361",
+                    "Purchasing Doc. Type": "ZB",
+                    "Purchase Order Date": "2025-02-01",
+                    "Total val. upon release": "7652452"
+                },
+                {
+                    "Client": "100",
+                    "Purchase Order": "4500004361",
+                    "Purchasing Doc. Type": "ZB",
+                    "Purchase Order Date": "2025-02-27",
+                    "Total val. upon release": "7652452"
+                }
+            ]
+            }
       "05c5b5be-66b3-40c8-9f4c-75d9327d5566":
         name: "SAP_Z_POH"
         type: "OBJECT"
@@ -282,11 +301,11 @@ api-tryin: |-
               "delimiter" : "&",
               "items" : [ {
                 "name" : "dateFrom",
-                "value" : "2025-02-01",
+                "value" : "20250201",
                 "enabled" : false
               }, {
                 "name" : "dateTo",
-                "value" : "2025-02-01",
+                "value" : "20250201",
                 "enabled" : false
               } ]
             }
@@ -311,7 +330,7 @@ api-tryin: |-
         "projectId" : "fd857daa-675c-418f-b8cd-ed6a47e0e59b"
       },
       "variables" : {
-        "f84f5e35-4abf-43aa-b51e-ca6fa0a0c93f" : {
+        "20f892e9-69d5-48f1-a183-56ff0ffd0f9d" : {
           "name" : "BaseUrl",
           "value" : "https://2ig912ru1eka29u.eu.api-mocks.com",
           "enabled" : true,
@@ -324,7 +343,7 @@ api-tryin: |-
         "projectId" : "fd857daa-675c-418f-b8cd-ed6a47e0e59b"
       },
       "variables" : {
-        "ab3ad42e-222e-417a-a7af-d109c5d30e91" : {
+        "5792e2a1-0114-4cbb-be1e-e39fa470ccad" : {
           "name" : "BaseUrl",
           "value" : "http://www.agilos.com",
           "enabled" : true,
