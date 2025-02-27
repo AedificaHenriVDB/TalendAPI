@@ -4,6 +4,8 @@
   <url>
     <loc>/apis/api_demo/1.0.0/</loc>
   </url><url>
+    <loc>/apis/sap_extract_test/1.0.0/</loc>
+  </url><url>
     <loc>/apis/</loc>
   </url><url>
     <loc>/categories/</loc>

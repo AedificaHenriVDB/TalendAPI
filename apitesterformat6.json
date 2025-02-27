@@ -3,35 +3,14 @@
   "entities" : [ {
     "entity" : {
       "type" : "Project",
-      "name" : "API_DEMO 1.0.0",
+      "name" : "SAP_EXTRACT_TEST 1.0.0",
       "description" : "No description",
-      "importedFrom" : "734b112a-2a3a-46fc-89ba-8020878eed42"
+      "importedFrom" : "fd857daa-675c-418f-b8cd-ed6a47e0e59b"
     },
     "children" : [ {
       "entity" : {
         "type" : "Request",
-        "id" : "57bbc097-942c-4dbb-8b35-607f10493b89",
-        "name" : "List Customers",
-        "description" : "List All customers",
-        "uri" : {
-          "host" : "${\"BaseUrl\"}",
-          "path" : "/Customers"
-        },
-        "method" : {
-          "link" : "",
-          "name" : "GET"
-        },
-        "headers" : [ {
-          "enabled" : true,
-          "name" : "Accept",
-          "value" : "application/json"
-        } ],
-        "headersType" : "Form"
-      }
-    }, {
-      "entity" : {
-        "type" : "Request",
-        "id" : "24a7a629-f739-41f7-9102-2468daf7cdb5",
+        "id" : "ac8c3ab8-f37f-4089-bed3-b4295a30c7cb",
         "name" : "Add Customer",
         "uri" : {
           "host" : "${\"BaseUrl\"}",
@@ -56,11 +35,12 @@
     }, {
       "entity" : {
         "type" : "Request",
-        "id" : "fec49c85-fa60-4e26-bb40-9d53490ef491",
-        "name" : "Get One Custome",
+        "id" : "a6b9e8da-e3be-4472-b4f3-03be430a009b",
+        "name" : "SAP_Z_POH",
+        "description" : "Z_POH SAP DATA",
         "uri" : {
           "host" : "${\"BaseUrl\"}",
-          "path" : "/Customer/{ID}"
+          "path" : "/Z_POH"
         },
         "method" : {
           "link" : "",
@@ -73,28 +53,61 @@
         } ],
         "headersType" : "Form"
       }
+    }, {
+      "entity" : {
+        "type" : "Request",
+        "id" : "2fd3f3cb-1900-4e98-8254-3b590b4bf785",
+        "name" : "Filter_SAP_Z_POH",
+        "uri" : {
+          "host" : "${\"BaseUrl\"}",
+          "path" : "/Z_POH/{Client}",
+          "query" : {
+            "delimiter" : "&",
+            "items" : [ {
+              "name" : "dateFrom",
+              "value" : "2025-02-01",
+              "enabled" : false
+            }, {
+              "name" : "dateTo",
+              "value" : "2025-02-01",
+              "enabled" : false
+            } ]
+          }
+        },
+        "method" : {
+          "link" : "",
+          "name" : "GET"
+        },
+        "headers" : [ {
+          "enabled" : true,
+          "name" : "Accept",
+          "value" : "application/json"
+        } ],
+        "headersType" : "Form",
+        "uriEditor" : true
+      }
     } ]
   } ],
   "environments" : [ {
-    "name" : "API_DEMO 1.0.0",
+    "name" : "SAP_EXTRACT_TEST 1.0.0",
     "importedFrom" : {
-      "projectId" : "734b112a-2a3a-46fc-89ba-8020878eed42"
+      "projectId" : "fd857daa-675c-418f-b8cd-ed6a47e0e59b"
     },
     "variables" : {
-      "3c072389-42bb-4d36-8148-1bf28b888e8d" : {
+      "f84f5e35-4abf-43aa-b51e-ca6fa0a0c93f" : {
         "name" : "BaseUrl",
-        "value" : "http://127.0.0.0:8090",
+        "value" : "https://2ig912ru1eka29u.eu.api-mocks.com",
         "enabled" : true,
         "private" : false
       }
     }
   }, {
-    "name" : "API_DEMO 1.0.0",
+    "name" : "SAP_EXTRACT_TEST 1.0.0",
     "importedFrom" : {
-      "projectId" : "734b112a-2a3a-46fc-89ba-8020878eed42"
+      "projectId" : "fd857daa-675c-418f-b8cd-ed6a47e0e59b"
     },
     "variables" : {
-      "4ee01ad3-8c2d-421f-bfb7-39af14296c75" : {
+      "ab3ad42e-222e-417a-a7af-d109c5d30e91" : {
         "name" : "BaseUrl",
         "value" : "http://www.agilos.com",
         "enabled" : true,
