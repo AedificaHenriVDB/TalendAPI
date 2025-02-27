@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Landing page on API Portal</title>
+    <link>/</link>
+    <description>Recent content in Landing page on API Portal</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Getting started</title>
+      <link>/getting-started/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/getting-started/</guid>
+      <description>&lt;h1 id=&#34;getting-started&#34;&gt;Getting started&lt;/h1&gt;&#xA;&lt;p&gt;This is placeholder content.&lt;/p&gt;&#xA;&lt;p&gt;Learn &lt;a href=&#34;https://help.talend.com/access/sources/content/topic?pageid=designer_portal_organize_add_content&amp;amp;EnrichVersion=Cloud&amp;amp;afs:lang=en&#34;&gt;how to add custom content to your API Portal&lt;/a&gt;.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
