@@ -6,8 +6,8 @@
     "title" : "API_DEMO",
     "contact" : { }
   },
-  "host" : "2ig912ru1eka29u.eu.api-mocks.com",
-  "schemes" : [ "https" ],
+  "host" : "127.0.0.0:8090",
+  "schemes" : [ "http" ],
   "paths" : {
     "/Customers" : {
       "get" : {

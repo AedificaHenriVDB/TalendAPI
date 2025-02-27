@@ -7,10 +7,11 @@ api-definition:
     name: "API_DEMO"
     version: "1.0.0"
     description: "No description"
+    license: {}
     contact: {}
   contract:
     baseUrls:
-    - url: "https://2ig912ru1eka29u.eu.api-mocks.com"
+    - url: "http://127.0.0.0:8090"
       description: "This is your API mock endpoint. When called, it will simulate the behavior of your API."
       isPublished: true
     - url: "http://www.agilos.com"
@@ -319,9 +320,9 @@ api-tryin: |-
         "projectId" : "734b112a-2a3a-46fc-89ba-8020878eed42"
       },
       "variables" : {
-        "23079b7a-429d-40f9-a3d0-a6fe055b1379" : {
+        "528d0677-bad2-454a-ad3e-4d5c2c831bcb" : {
           "name" : "BaseUrl",
-          "value" : "https://2ig912ru1eka29u.eu.api-mocks.com",
+          "value" : "http://127.0.0.0:8090",
           "enabled" : true,
           "private" : false
         }
@@ -332,7 +333,7 @@ api-tryin: |-
         "projectId" : "734b112a-2a3a-46fc-89ba-8020878eed42"
       },
       "variables" : {
-        "116face0-db8f-4061-92d5-fb5dd06ef018" : {
+        "0ac594f9-a23b-49df-a699-2f6e1505f0dc" : {
           "name" : "BaseUrl",
           "value" : "http://www.agilos.com",
           "enabled" : true,
