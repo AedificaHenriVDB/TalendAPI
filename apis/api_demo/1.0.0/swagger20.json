@@ -139,7 +139,7 @@
             "type" : "object",
             "properties" : {
               "ID" : {
-                "type" : "string"
+                "type" : "integer"
               },
               "NAME" : {
                 "type" : "string"
@@ -169,7 +169,7 @@
                 "type" : "string"
               },
               "POSTAL_CODE" : {
-                "type" : "string"
+                "type" : "integer"
               }
             }
           }
