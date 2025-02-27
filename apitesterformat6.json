@@ -81,9 +81,9 @@
       "projectId" : "734b112a-2a3a-46fc-89ba-8020878eed42"
     },
     "variables" : {
-      "23079b7a-429d-40f9-a3d0-a6fe055b1379" : {
+      "3b307669-ae31-4585-9286-9a97a0dcc79a" : {
         "name" : "BaseUrl",
-        "value" : "https://2ig912ru1eka29u.eu.api-mocks.com",
+        "value" : "http://127.0.0.0:8090",
         "enabled" : true,
         "private" : false
       }
@@ -94,7 +94,7 @@
       "projectId" : "734b112a-2a3a-46fc-89ba-8020878eed42"
     },
     "variables" : {
-      "116face0-db8f-4061-92d5-fb5dd06ef018" : {
+      "1ac6cd68-1416-4e1f-9820-82939f6a2615" : {
         "name" : "BaseUrl",
         "value" : "http://www.agilos.com",
         "enabled" : true,

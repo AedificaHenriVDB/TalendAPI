@@ -7,7 +7,7 @@
     "version" : "1.0.0"
   },
   "servers" : [ {
-    "url" : "https://2ig912ru1eka29u.eu.api-mocks.com",
+    "url" : "http://127.0.0.0:8090",
     "description" : "This is your API mock endpoint. When called, it will simulate the behavior of your API."
   }, {
     "url" : "http://www.agilos.com",
